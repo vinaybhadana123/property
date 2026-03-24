@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="buy-section">
+
+  <h2 class="section-title">Find Your Dream Property</h2>
+
+  <!-- SEARCH + FILTER -->
+  <div class="filters">
+
+    <input type="text" id="search" placeholder="Search location...">
+
+    <select id="type">
+      <option value="">Property Type</option>
+      <option value="villa">Villa</option>
+      <option value="apartment">Apartment</option>
+      <option value="plot">Plot</option>
+    </select>
+
+    <select id="bedrooms">
+      <option value="">Bedrooms</option>
+      <option value="1">1 BHK</option>
+      <option value="2">2 BHK</option>
+      <option value="3">3 BHK</option>
+    </select>
+
+    <select id="price">
+      <option value="">Price Range</option>
+      <option value="low">Below 50L</option>
+      <option value="mid">50L - 1Cr</option>
+      <option value="high">Above 1Cr</option>
+    </select>
+
+  </div>
+
+  <!-- PROPERTY CARDS -->
+  <div class="property-container" id="propertyContainer"></div>
+
+</section>
+<script src="script.js"></script>
+</body>
+</html>
