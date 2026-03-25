@@ -1,0 +1,79 @@
+.sell-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0a58c5, #ffffff);
+  text-align: center;
+}
+
+/* HEADER */
+.sell-logo {
+  width: 200px;
+  margin-bottom: 10px;
+  /* filter: hue-rotate(180deg) saturate(9); */
+  border: 1px solid black;
+  border-radius: 20px;
+  background: black;
+}
+
+.sell-header h2 {
+  font-size: 32px;
+}
+
+.sell-header p {
+  color: black;
+  margin-bottom: 30px;
+}
+
+/* FORM */
+.sell-form {
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  gap: 15px;
+}
+
+.sell-form input,
+.sell-form select {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.sell-form button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.sell-footer {
+  margin-top: 50px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  text-align: center;
+}
+
+.sell-footer h2 {
+  font-size: 28px;
+}
+
+.sell-footer p {
+  max-width: 700px;
+  margin: 15px auto;
+}
+
+.contact-btn {
+  padding: 12px 25px;
+  border: none;
+  background: #fff;
+  color: #007bff;
+  border-radius: 25px;
+  cursor: pointer;
+}

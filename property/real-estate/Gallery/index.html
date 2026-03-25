@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="gallery-section">
+
+  <!-- HEADER -->
+  <div class="gallery-header">
+    <img src="Algotrick & Realty l.png" class="gallery-logo">
+    <h2>Our Property Gallery</h2>
+    <p>Explore our premium listings, projects & office presence</p>
+  </div>
+
+  <!-- FILTER -->
+  <div class="gallery-filters">
+    <button class="active" onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('property')">Properties</button>
+    <button onclick="filterGallery('plot')">Plots</button>
+    <button onclick="filterGallery('office')">Office</button>
+  </div>
+
+  <!-- GRID -->
+  <div class="gallery-grid" id="galleryGrid"></div>
+
+</section>
+
+<!-- FOOTER CTA -->
+<section class="gallery-footer">
+  <h2>Discover More Premium Properties</h2>
+  <p>Contact Algotrick & Realty for exclusive deals and site visits</p>
+  <button onclick="contactNow()">Get in Touch</button>
+</section>
+
+<!-- MODAL -->
+<div class="gallery-modal" id="galleryModal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img id="modalImg">
+</div>
+<script src="script.js"></script>
+</body>
+</html>

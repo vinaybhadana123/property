@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>buy</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="buy-section">
+  <section class="buy-section">
 
-  <h2 class="section-title">Find Your Dream Property</h2>
+  <!-- HEADER WITH LOGO -->
+  <div class="buy-header">
+    <img src="Algotrick & Realty l.png" class="buy-logo">
+    <h2>Find Your Dream Property</h2>
+  </div>
 
-  <!-- SEARCH + FILTER -->
+  <!-- FILTERS -->
   <div class="filters">
-
     <input type="text" id="search" placeholder="Search location...">
 
     <select id="type">
@@ -25,9 +28,10 @@
 
     <select id="bedrooms">
       <option value="">Bedrooms</option>
-      <option value="1">1 BHK</option>
-      <option value="2">2 BHK</option>
       <option value="3">3 BHK</option>
+      <option value="4">4 BHK</option>
+      <option value="5">5 BHK</option>
+      <option value="8">8 BHK</option>
     </select>
 
     <select id="price">
@@ -36,13 +40,44 @@
       <option value="mid">50L - 1Cr</option>
       <option value="high">Above 1Cr</option>
     </select>
-
   </div>
 
-  <!-- PROPERTY CARDS -->
+  <!-- PROPERTY GRID -->
   <div class="property-container" id="propertyContainer"></div>
 
 </section>
+
+
+
+<!-- extra properties -->
+
+<section class="extra-properties">
+
+  <h2 class="extra-title">Featured Premium Properties</h2>
+
+  <div class="extra-container" id="extraContainer"></div>
+
+</section>
+
+
+
+
+<!-- footer properties -->
+<section class="buy-footer">
+
+  <h2>Your Property, Our Priority</h2>
+
+  <p>
+    Discover premium properties across Gurgaon, Uttarakhand, Haridwar, and beyond. 
+    At <strong>Algotrick & Realty</strong>, we are committed to helping you find 
+    the perfect home, investment, or commercial space with trust, transparency, 
+    and excellence.
+  </p>
+
+  <button class="contact-btn">Contact Us</button>
+
+</section>
+
 <script src="script.js"></script>
 </body>
 </html>
