@@ -10,7 +10,8 @@
   margin-bottom: 10px;
   /* filter: hue-rotate(180deg) saturate(9); */
   border: 1px solid black;
-  border-radius: 20px;
+  border-bottom-left-radius: 70px;
+  border-top-right-radius: 70px;
   background: black;
 }
 
