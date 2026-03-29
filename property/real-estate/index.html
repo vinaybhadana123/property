@@ -21,7 +21,7 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- 
     - google icon link
@@ -42,76 +42,77 @@
     - custom js link
   -->
   <script src="./assets/js/script.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-  <!-- owl corousel links -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-
-
-<!-- jQuery (required) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- 
-
-
     - preload images
   -->
 
 </head>
 <body>
+  <!-- 
+    - #DARK MODE TOGGLE
+  -->
+  <div class="theme-toggle-container">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <span class="material-symbols-rounded">dark_mode</span>
+      <span class="theme-text">Dark Mode</span>
+    </button>
+  </div>
 
   <!-- 
-    - #HEADER
+    - #HAMBURGER MENU
   -->
-
-  <header class="header" data-header>
-    <div class="container">
-
-      <a href="#" class="logo">
-        <img src="assets/images/Algotrick & Realty l.png" width="190" height="28" alt="Algotrick & Reality" data-aos="fade-down"
-        class="aos-init aos-animate" style="height: 250px; width: 300px; font-size: 80px; margin-top: 15px;">
-      </a>
-
-      <nav class="navbar" data-navbar>
-
-        <ul class="navbar-list">
-
-          <li>
-            <a href="#" class="navbar-link label-medium active">Home</a>
-          </li>
-
-          <li>
-            <a href="buy/index.html" class="navbar-link label-medium">Buy</a>
-          </li>
-
-          <li>
-            <a href="sell/index.html" class="navbar-link label-medium">Sell</a>
-          </li>
-
-          <li>
-            <a href="About/index.html" class="navbar-link label-medium">About</a>
-          </li>
-
-          <li>
-            <a href="Gallery/index.html" class="navbar-link label-medium">Gallery</a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <button class="nav-toggle-btn icon-btn" aria-label="toggle navbar" data-nav-toggler>
-        <span class="material-symbols-rounded open" aria-hidden="true">menu</span>
-
-        <span class="material-symbols-rounded close" aria-hidden="true">close</span>
-      </button>
-
-    </div>
-  </header>
-
-
-
+  <div class="hamburger-menu-container">
+    <button class="hamburger-menu-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+      <div class="hamburger-lines">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </div>
+      <span class="menu-text">Menu</span>
+    </button>
+    
+    <nav class="hamburger-dropdown" id="hamburgerDropdown" aria-hidden="true">
+      <ul class="hamburger-list">
+        <li class="hamburger-item">
+          <a href="#" class="hamburger-link">
+            <span class="hamburger-icon">🏠</span>
+            <span class="hamburger-label">Home</span>
+          </a>
+        </li>
+        <li class="hamburger-item">
+          <a href="buy/index.html" class="hamburger-link">
+            <span class="hamburger-icon">💰</span>
+            <span class="hamburger-label">Buy</span>
+          </a>
+        </li>
+        <li class="hamburger-item">
+          <a href="sell/index.html" class="hamburger-link">
+            <span class="hamburger-icon">🏷️</span>
+            <span class="hamburger-label">Sell</span>
+          </a>
+        </li>
+        <li class="hamburger-item">
+          <a href="contact/index.html" class="hamburger-link">
+            <span class="hamburger-icon">📞</span>
+            <span class="hamburger-label">Contact Us</span>
+          </a>
+        </li>
+        <li class="hamburger-item">
+          <a href="Gallery/index.html" class="hamburger-link">
+            <span class="hamburger-icon">🖼️</span>
+            <span class="hamburger-label">Gallery</span>
+          </a>
+        </li>
+        <li class="hamburger-item">
+          <a href="contact/index.html" class="hamburger-link">
+            <span class="hamburger-icon">📞</span>
+            <span class="hamburger-label">About</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
 
   <main>
@@ -126,10 +127,12 @@
 
           <div class="hero-content">
 
-            <h1 class="headline-large hero-title" data-aos="fade-up" data-aos-delay="200">Find a place where you can be yourself.</h1>
+            <h1 class="headline-large hero-title" data-aos="fade-up" data-aos-delay="200">
+              Find Your Dream Home Today
+            </h1>
 
             <p class="body-large hero-text" data-aos="fade-up" data-aos-delay="300">
-              If you're looking for a place where you can be yourself, don't give up. Keep searching until you find a place that feels like home.
+              Discover your perfect property with our expert guidance and premium listings. Your dream home is just a click away.
             </p>
 
             <form action="./" method="get" class="search-bar" data-aos="fade-up" data-aos-delay="400">
@@ -139,8 +142,8 @@
 
                 <select name="want-to" class="search-item-field body-medium">
                   <option value="buy" selected>Buy</option>
-                  <option value="sell" >Sell</option>
-                  <option value="rent" >Rent</option>
+                  <option value="sell">Sell</option>
+                  <option value="rent">Rent</option>
                 </select>
 
                 <span class="material-symbols-rounded" aria-hidden="true">real_estate_agent</span>
@@ -151,12 +154,12 @@
 
                 <select name="property-type" class="search-item-field body-medium">
                   <option value="any" selected>Any</option>
-                  <option value="houses" >Houses</option>
-                  <option value="apartments" >Apartments</option>
-                  <option value="villa" >Villa</option>
-                  <option value="townhome" >Townhome</option>
-                  <option value="bungalow" >Bungalow</option>
-                  <option value="loft" >Loft</option>
+                  <option value="houses">Houses</option>
+                  <option value="apartments">Apartments</option>
+                  <option value="villa">Villa</option>
+                  <option value="townhome">Townhome</option>
+                  <option value="bungalow">Bungalow</option>
+                  <option value="loft">Loft</option>
                 </select>
 
                 <span class="material-symbols-rounded" aria-hidden="true">gite</span>
@@ -172,25 +175,35 @@
 
               <button type="submit" class="search-btn">
                 <span class="material-symbols-rounded" aria-hidden="true">search</span>
-
-                <span class="label-medium">Search</span>
+                <span class="label-medium">Search Properties</span>
               </button>
 
             </form>
 
           </div>
 
-          <div id="slider">
-          <img src="assets/images/Luxury modern 2 .png" width="816" height="659" role="presentation" class="hero-banner" data-aos="fade-left" data-aos-delay="500">
-          <img src="./assets/images/bg-pattern.png" width="1240" height="840" role="presentation" class="bg-pattern">
+          <div class="hero-banner-container">
+            <img src="assets/images/Luxury modern 2 .png" width="816" height="659" alt="Luxury Home" class="hero-banner" data-aos="fade-left" data-aos-delay="500">
+            <div class="hero-overlay">
+              <div class="hero-stats">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="600">
+                  <span class="stat-number">5000+</span>
+                  <span class="stat-label">Properties Listed</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="700">
+                  <span class="stat-number">1000+</span>
+                  <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="800">
+                  <span class="stat-number">15+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
       </section>
-
-
-
-
 
       <!-- 
         - #PROPERTY SECTION
@@ -202,40 +215,50 @@
           <div class="title-wrapper" data-aos="fade-right">
 
             <div>
-              <h2 class="section-title headline-small" data-aos="fade-right" data-aos-delay="100">Best home in your city</h2>
-
+              <h2 class="section-title headline-small" data-aos="fade-right" data-aos-delay="100">Premium Properties</h2>
               <p class="section-text body-large" data-aos="fade-right" data-aos-delay="200">
-              We help you find the perfect property that fits your lifestyle and investment goals with ease and trust.
+                Explore our handpicked selection of premium properties that offer luxury, comfort, and exceptional value.
               </p>
             </div>
 
-            <a href="#" class="btn btn-outline" data-aos="fade-left" data-aos-delay="300">
-              <span class="label-medium">Explore more</span>
-
-              <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
-            </a>
+            <div class="property-actions">
+              <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="house">Houses</button>
+                <button class="filter-btn" data-filter="apartment">Apartments</button>
+                <button class="filter-btn" data-filter="villa">Villas</button>
+              </div>
+              <select class="sort-select" data-sort-select>
+                <option value="default">Sort by</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="bedrooms">Bedrooms</option>
+                <option value="bathrooms">Bathrooms</option>
+                <option value="area">Area</option>
+              </select>
+            </div>
 
           </div>
 
-          <div class="property-list">
+          <div class="property-list" data-property-list>
 
-            <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card" data-aos="fade-up" data-aos-delay="100" data-type="house" data-price="12000000" data-bedrooms="3" data-bathrooms="2" data-area="1430" data-property-id="prop-1">
               <div class="card-banner">
                 <figure class="img-holder" style="--width: 585; --height: 390;">
-                  <img src="assets/images/sector 45.jpg" width="585" height="390" alt="COVA Home Realty" class="img-cover">
+                  <img src="assets/images/sector 45.jpg" width="585" height="390" alt="Prime Residential Space" class="img-cover">
                 </figure>
-                <span class="badge label-medium">New</span>
+                <span class="badge label-medium">Featured</span>
                 <button class="icon-btn fav-btn" aria-label="add to favorite" data-toggle-btn>
-                  <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">favorite_border</span>
                 </button>
               </div>
               <div class="card-content">
                 <span class="title-large">₹1.2Cr</span>
                 <h3>
-                  <a href="#" class="title-small card-title">Algotrick Realty</a>
+                  <a href="#" class="title-small card-title">Prime Residential Space</a>
                 </h3>
                 <address class="body-medium card-text">
-                  Prime Residential Space, Sector 45, Gurugram 122003
+                  Sector 45, Gurugram 122003
                 </address>
                 <div class="card-meta-list">
                   <div class="meta-item">
@@ -248,28 +271,34 @@
                   </div>
                   <div class="meta-item">
                     <span class="material-symbols-rounded meta-icon" aria-hidden="true">straighten</span>
-                    <span class="meta-text label-medium">1430 sqft </span>
+                    <span class="meta-text label-medium">1430 sqft</span>
                   </div>
+                </div>
+                <div class="card-features">
+                  <span class="feature-tag">Swimming Pool</span>
+                  <span class="feature-tag">Garden</span>
+                  <span class="feature-tag">Garage</span>
                 </div>
               </div>
             </div>
 
-            <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card" data-aos="fade-up" data-aos-delay="200" data-type="villa" data-price="85500000" data-bedrooms="5" data-bathrooms="4" data-area="1630" data-property-id="prop-2">
               <div class="card-banner">
                 <figure class="img-holder" style="--width: 585; --height: 390;">
-                  <img src="assets/images/Modern Commercial Space, Kharkhoda Industrial Area, Sonipat 131402.jpg" width="585" height="390" alt="Exit Realty" class="img-cover">
+                  <img src="assets/images/Modern Commercial Space, Kharkhoda Industrial Area, Sonipat 131402.jpg" width="585" height="390" alt="Luxury Villa" class="img-cover">
                 </figure>
+                <span class="badge label-medium">Luxury</span>
                 <button class="icon-btn fav-btn" aria-label="add to favorite" data-toggle-btn>
-                  <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">favorite_border</span>
                 </button>
               </div>
               <div class="card-content">
                 <span class="title-large">₹85.50L</span>
                 <h3>
-                  <a href="#" class="title-small card-title">Algotrick Realty</a>
+                  <a href="#" class="title-small card-title">Luxury Villa</a>
                 </h3>
                 <address class="body-medium card-text">
-                Modern Commercial Space, Kharkhoda Industrial Area, Sonipat 131402
+                  Kharkhoda Industrial Area, Sonipat 131402
                 </address>
                 <div class="card-meta-list">
                   <div class="meta-item">
@@ -282,28 +311,34 @@
                   </div>
                   <div class="meta-item">
                     <span class="material-symbols-rounded meta-icon" aria-hidden="true">straighten</span>
-                    <span class="meta-text label-medium">1630 sqft </span>
+                    <span class="meta-text label-medium">1630 sqft</span>
                   </div>
+                </div>
+                <div class="card-features">
+                  <span class="feature-tag">Ocean View</span>
+                  <span class="feature-tag">Private Pool</span>
+                  <span class="feature-tag">Smart Home</span>
                 </div>
               </div>
             </div>
 
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card" data-aos="fade-up" data-aos-delay="300" data-type="apartment" data-price="72000000" data-bedrooms="8" data-bathrooms="5" data-area="1240" data-property-id="prop-3">
               <div class="card-banner">
                 <figure class="img-holder" style="--width: 585; --height: 390;">
-                  <img src="assets/images/Investment Ready Plot, Sector 6, Jhajjar 124103.jpg" width="585" height="390" alt="The Real Estate Group" class="img-cover">
+                  <img src="assets/images/Investment Ready Plot, Sector 6, Jhajjar 124103.jpg" width="585" height="390" alt="Modern Apartment" class="img-cover">
                 </figure>
+                <span class="badge label-medium">Investment</span>
                 <button class="icon-btn fav-btn" aria-label="add to favorite" data-toggle-btn>
-                  <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">favorite_border</span>
                 </button>
               </div>
               <div class="card-content">
                 <span class="title-large">₹72.00L</span>
                 <h3>
-                  <a href="#" class="title-small card-title">Algotrick Realty</a>
+                  <a href="#" class="title-small card-title">Modern Apartment</a>
                 </h3>
                 <address class="body-medium card-text">
-                Investment Ready Plot, Sector 6, Jhajjar 124103
+                  Sector 6, Jhajjar 124103
                 </address>
                 <div class="card-meta-list">
                   <div class="meta-item">
@@ -316,28 +351,34 @@
                   </div>
                   <div class="meta-item">
                     <span class="material-symbols-rounded meta-icon" aria-hidden="true">straighten</span>
-                    <span class="meta-text label-medium">1240 sqft </span>
+                    <span class="meta-text label-medium">1240 sqft</span>
                   </div>
+                </div>
+                <div class="card-features">
+                  <span class="feature-tag">Gym</span>
+                  <span class="feature-tag">Pool</span>
+                  <span class="feature-tag">Security</span>
                 </div>
               </div>
             </div>
 
-            <div class="card" data-aos="fade-up" data-aos-delay="400">
+            <div class="card" data-aos="fade-up" data-aos-delay="400" data-type="house" data-price="145000000" data-bedrooms="8" data-bathrooms="8" data-area="1950" data-property-id="prop-4">
               <div class="card-banner">
                 <figure class="img-holder" style="--width: 585; --height: 390;">
-                  <img src="assets/images/Luxury Villa Property, Pataudi Road, Gurgaon 122504.jpg" width="585" height="390" alt="Keller Williams Elite Town Center" class="img-cover">
+                  <img src="assets/images/Luxury Villa Property, Pataudi Road, Gurgaon 122504.jpg" width="585" height="390" alt="Executive House" class="img-cover">
                 </figure>
+                <span class="badge label-medium">Executive</span>
                 <button class="icon-btn fav-btn" aria-label="add to favorite" data-toggle-btn>
-                  <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">favorite_border</span>
                 </button>
               </div>
               <div class="card-content">
                 <span class="title-large">₹1.45Cr</span>
                 <h3>
-                  <a href="#" class="title-small card-title">Algotrick Realty</a>
+                  <a href="#" class="title-small card-title">Executive House</a>
                 </h3>
                 <address class="body-medium card-text">
-              Luxury Villa Property, Pataudi Road, Gurgaon 122504
+                  Pataudi Road, Gurgaon 122504
                 </address>
                 <div class="card-meta-list">
                   <div class="meta-item">
@@ -353,25 +394,31 @@
                     <span class="meta-text label-medium">1950 sqft</span>
                   </div>
                 </div>
+                <div class="card-features">
+                  <span class="feature-tag">Home Theater</span>
+                  <span class="feature-tag">Wine Cellar</span>
+                  <span class="feature-tag">Guest House</span>
+                </div>
               </div>
             </div>
 
-            <div class="card" data-aos="fade-up" data-aos-delay="500">
+            <div class="card" data-aos="fade-up" data-aos-delay="500" data-type="apartment" data-price="68900000" data-bedrooms="4" data-bathrooms="4" data-area="1580" data-property-id="prop-5">
               <div class="card-banner">
                 <figure class="img-holder" style="--width: 585; --height: 390;">
-                  <img src="assets/images/Peaceful Residential Home, Dehradun City, 248001.webp" width="585" height="390" alt="All Pros Real Estate" class="img-cover">
+                  <img src="assets/images/Peaceful Residential Home, Dehradun City, 248001.webp" width="585" height="390" alt="Peaceful Apartment" class="img-cover">
                 </figure>
+                <span class="badge label-medium">New</span>
                 <button class="icon-btn fav-btn" aria-label="add to favorite" data-toggle-btn>
-                  <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">favorite_border</span>
                 </button>
               </div>
               <div class="card-content">
                 <span class="title-large">₹68.90L</span>
                 <h3>
-                  <a href="#" class="title-small card-title">Algotrick Realty</a>
+                  <a href="#" class="title-small card-title">Peaceful Apartment</a>
                 </h3>
                 <address class="body-medium card-text">
-                Peaceful Residential Home, Dehradun City, 248001
+                  Dehradun City, 248001
                 </address>
                 <div class="card-meta-list">
                   <div class="meta-item">
@@ -387,25 +434,31 @@
                     <span class="meta-text label-medium">1580 sqft</span>
                   </div>
                 </div>
+                <div class="card-features">
+                  <span class="feature-tag">Balcony</span>
+                  <span class="feature-tag">Parking</span>
+                  <span class="feature-tag">Garden</span>
+                </div>
               </div>
             </div>
 
-            <div class="card" data-aos="fade-up" data-aos-delay="600">
+            <div class="card" data-aos="fade-up" data-aos-delay="600" data-type="villa" data-price="95750000" data-bedrooms="3" data-bathrooms="2" data-area="1120" data-property-id="prop-6">
               <div class="card-banner">
                 <figure class="img-holder" style="--width: 585; --height: 390;">
-                  <img src="assets/images/Scenic Plot for Living, Rishikesh Riverside Area, 249201.jpg" width="585" height="390" alt="FIT Realty" class="img-cover">
+                  <img src="assets/images/Scenic Plot for Living, Rishikesh Riverside Area, 249201.jpg" width="585" height="390" alt="Scenic Villa" class="img-cover">
                 </figure>
+                <span class="badge label-medium">Scenic</span>
                 <button class="icon-btn fav-btn" aria-label="add to favorite" data-toggle-btn>
-                  <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">favorite_border</span>
                 </button>
               </div>
               <div class="card-content">
                 <span class="title-large">₹95.75L</span>
                 <h3>
-                  <a href="#" class="title-small card-title">Algotrick Realty</a>
+                  <a href="#" class="title-small card-title">Scenic Villa</a>
                 </h3>
                 <address class="body-medium card-text">
-                Scenic Plot for Living, Rishikesh Riverside Area, 249201
+                  Rishikesh Riverside Area, 249201
                 </address>
                 <div class="card-meta-list">
                   <div class="meta-item">
@@ -421,6 +474,11 @@
                     <span class="meta-text label-medium">1120 sqft</span>
                   </div>
                 </div>
+                <div class="card-features">
+                  <span class="feature-tag">Mountain View</span>
+                  <span class="feature-tag">Private Beach</span>
+                  <span class="feature-tag">Infinity Pool</span>
+                </div>
               </div>
             </div>
 
@@ -428,10 +486,6 @@
 
         </div>
       </section>
-
-
-
-
 
       <!-- 
         - #FEATURE
@@ -441,7 +495,7 @@
         <div class="container">
 
           <figure class="feature-banner" data-aos="zoom-in">
-            <img src="./assets/images/feature-banner-1.jpg" width="1020" height="690" loading="lazy"  alt="feature banner" class="img-cover">
+            <img src="./assets/images/feature-banner-1.jpg" width="1020" height="690" loading="lazy" alt="feature banner" class="img-cover">
           </figure>
 
           <div class="feature-content">
@@ -450,7 +504,7 @@
               We Specialize In Premium Property Deals
             </h2>
 
-            <p class="body-large feature-text" data-aos="fade-up" data-aos-delay="100">            
+            <p class="body-large feature-text" data-aos="fade-up" data-aos-delay="100">
               Looking to buy your dream property or invest in high-growth locations? Algotrick Realty offers expert guidance in residential, commercial, and plot investments across prime locations. From property selection to final deal, we ensure a smooth and transparent buying experience tailored to your needs.
             </p>
 
@@ -478,23 +532,37 @@
 
             </ul>
 
+            <div class="feature-stats" data-aos="fade-up" data-aos-delay="400">
+              <div class="stat-box">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Client Satisfaction</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Agents Nationwide</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">₹500Cr+</span>
+                <span class="stat-label">Properties Sold</span>
+              </div>
+            </div>
+
           </div>
 
         </div>
       </section>
 
-
       <section class="section feature feature-2" aria-labelledby="feature-label-2" data-aos="fade-right">
         <div class="container">
 
           <figure class="feature-banner" data-aos="zoom-in" data-aos-delay="100">
-            <img src="./assets/images/feature-banner-2.jpg" width="1020" height="690" loading="lazy"  alt="feature banner" class="img-cover">
+            <img src="./assets/images/feature-banner-2.jpg" width="1020" height="690" loading="lazy" alt="feature banner" class="img-cover">
           </figure>
 
           <div class="feature-content">
 
             <h2 class="headline-medium" id="feature-label-2" data-aos="fade-up">
-            Find Your Perfect Property With Confidence
+              Find Your Perfect Property With Confidence
             </h2>
 
             <p class="body-large feature-text" data-aos="fade-up" data-aos-delay="150">
@@ -525,14 +593,25 @@
 
             </ul>
 
+            <div class="feature-awards" data-aos="fade-up" data-aos-delay="400">
+              <div class="award-item">
+                <span class="material-symbols-rounded award-icon">trophy</span>
+                <span class="award-text">Best Real Estate Agency 2024</span>
+              </div>
+              <div class="award-item">
+                <span class="material-symbols-rounded award-icon">verified</span>
+                <span class="award-text">Trusted by 1000+ Clients</span>
+              </div>
+              <div class="award-item">
+                <span class="material-symbols-rounded award-icon">stars</span>
+                <span class="award-text">5-Star Customer Rating</span>
+              </div>
+            </div>
+
           </div>
 
         </div>
       </section>
-
-
-
-
 
       <!-- 
         - #VIDEO
@@ -549,11 +628,6 @@
 
         </div>
       </section>
-
-
-
-
-
 
       <!-- 
         - #STORY
@@ -572,19 +646,19 @@
               <ul class="avatar-list" data-aos="fade-right" data-aos-delay="200">
 
                 <li class="avatar">
-                  <img src="assets/images/deepanshu.jpeg" width="120" height="80" loading="lazy" alt="John smith" class="img-cover">
+                  <img src="assets/images/deepanshu.jpeg" width="120" height="80" loading="lazy" alt="Deepanshu" class="img-cover">
                 </li>
 
                 <li class="avatar">
-                  <img src="assets/images/yuvraj.png" width="120" height="80" loading="lazy" alt="Jane smith" class="img-cover">
+                  <img src="assets/images/yuvraj.png" width="120" height="80" loading="lazy" alt="Yuvraj" class="img-cover">
                 </li>
 
                 <li class="avatar">
-                  <img src="assets/images/amit.png" width="120" height="80" loading="lazy" alt="John smith" class="img-cover">
+                  <img src="assets/images/amit.png" width="120" height="80" loading="lazy" alt="Amit" class="img-cover">
                 </li>
 
                 <li class="avatar">
-                  <img src="./assets/images/avatar-4.jpg" width="120" height="80" loading="lazy" alt="Jane smith" class="img-cover">
+                  <img src="./assets/images/avatar-4.jpg" width="120" height="80" loading="lazy" alt="Customer" class="img-cover">
 
                   <div class="overlay-content">
                     <span class="label-medium">99+</span>
@@ -596,7 +670,6 @@
 
             <a href="#" class="btn btn-outline" data-aos="fade-left" data-aos-delay="300">
               <span class="label-medium">View All Stories</span>
-
               <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
             </a>
 
@@ -622,7 +695,7 @@
                 </div>
 
                 <figure class="card-avatar">
-                  <img src="assets/images/ankush.jpeg" width="56" height="56" loading="lazy" alt="Chris Traeger" class="img-cover">
+                  <img src="assets/images/ankush.jpeg" width="56" height="56" loading="lazy" alt="Ankush" class="img-cover">
                 </figure>
 
               </a>
@@ -632,7 +705,7 @@
               <a href="#" class="overlay-content">
 
                 <div>
-                  <h3 class="title-small">MR. kapil</h3>
+                  <h3 class="title-small">MR. Kapil</h3>
 
                   <div class="rating-wrapper">
                     <span class="material-symbols-rounded" aria-hidden="true">star</span>
@@ -646,7 +719,7 @@
                 </div>
 
                 <figure class="card-avatar">
-                  <img src="assets/images/kapil.jpeg" width="56" height="56" loading="lazy" alt="Duke Silver" class="img-cover">
+                  <img src="assets/images/kapil.jpeg" width="56" height="56" loading="lazy" alt="Kapil" class="img-cover">
                 </figure>
 
               </a>
@@ -670,7 +743,7 @@
                 </div>
 
                 <figure class="card-avatar">
-                  <img src="assets/images/deepanshu.jpeg" width="56" height="56" loading="lazy" alt="Tsukasa Aoi" class="img-cover">
+                  <img src="assets/images/deepanshu.jpeg" width="56" height="56" loading="lazy" alt="Deepanshu" class="img-cover">
                 </figure>
 
               </a>
@@ -694,7 +767,7 @@
                 </div>
 
                 <figure class="card-avatar">
-                  <img src="assets/images/yuvraj.png" width="56" height="56" loading="lazy" alt="Freida Varnes" class="img-cover">
+                  <img src="assets/images/yuvraj.png" width="56" height="56" loading="lazy" alt="Yuvraj" class="img-cover">
                 </figure>
 
               </a>
@@ -718,7 +791,7 @@
                 </div>
 
                 <figure class="card-avatar">
-                  <img src="assets/images/vivek.jpeg" width="56" height="56" loading="lazy" alt="Carl Lorthner" class="img-cover">
+                  <img src="assets/images/vivek.jpeg" width="56" height="56" loading="lazy" alt="Vivek" class="img-cover">
                 </figure>
 
               </a>
@@ -742,7 +815,7 @@
                 </div>
 
                 <figure class="card-avatar">
-                  <img src="assets/images/WhatsApp Image 2024-12-12 at 22.26.59_8b2c3805.jpg" width="56" height="56" loading="lazy" alt="Marci Senter" class="img-cover">
+                  <img src="assets/images/WhatsApp Image 2024-12-12 at 22.26.59_8b2c3805.jpg" width="56" height="56" loading="lazy" alt="Vinay" class="img-cover">
                 </figure>
 
               </a>
@@ -753,12 +826,91 @@
         </div>
       </section>
 
+      <!-- 
+        - #TESTIMONIALS
+      -->
+
+      <section class="section testimonials" data-aos="fade-up">
+        <div class="container">
+          <div class="title-wrapper" data-aos="fade-down">
+            <div>
+              <p class="section-subtitle title-medium">Client Testimonials</p>
+              <h2 class="section-title headline-medium">What Our Clients Say</h2>
+            </div>
+          </div>
+
+          <div class="testimonial-slider">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="testimonial-content">
+                <span class="material-symbols-rounded quote-icon">format_quote</span>
+                <p class="testimonial-text body-large">
+                  "Algotrick Realty made buying our dream home so easy! Their expertise and attention to detail ensured we found the perfect property at the right price."
+                </p>
+                <div class="testimonial-author">
+                  <h4 class="author-name title-small">Ankush Sharma</h4>
+                  <span class="author-title body-medium">Home Buyer</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="testimonial-content">
+                <span class="material-symbols-rounded quote-icon">format_quote</span>
+                <p class="testimonial-text body-large">
+                  "The team at Algotrick Realty is professional, knowledgeable, and truly cares about their clients. I highly recommend them for anyone looking to buy or sell property."
+                </p>
+                <div class="testimonial-author">
+                  <h4 class="author-name title-small">Kapil Mehta</h4>
+                  <span class="author-title body-medium">Investor</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="testimonial-content">
+                <span class="material-symbols-rounded quote-icon">format_quote</span>
+                <p class="testimonial-text body-large">
+                  "Selling my property was stress-free thanks to Algotrick Realty. They handled everything professionally and got me the best price in record time!"
+                </p>
+                <div class="testimonial-author">
+                  <h4 class="author-name title-small">Deepanshu Gupta</h4>
+                  <span class="author-title body-medium">Property Seller</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        - #CALL TO ACTION
+      -->
+
+      <section class="section cta" data-aos="fade-up">
+        <div class="container">
+          <div class="cta-content">
+            <h2 class="cta-title headline-medium" data-aos="fade-up">
+              Ready to Find Your Dream Home?
+            </h2>
+            <p class="cta-text body-large" data-aos="fade-up" data-aos-delay="100">
+              Contact us today to speak with one of our expert real estate agents and start your journey to finding the perfect property.
+            </p>
+            <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
+              <a href="#" class="btn btn-fill">
+                <span class="label-medium">Get Started</span>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+              </a>
+              <a href="#" class="btn btn-outline">
+                <span class="label-medium">Contact Us</span>
+                <span class="material-symbols-rounded" aria-hidden="true">phone</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </article>
   </main>
-
-
-
-
 
   <!-- 
     - #FOOTER
@@ -771,17 +923,28 @@
 
         <div class="footer-brand" data-aos="fade-up" data-aos-delay="100">
           <a href="#" class="logo">
-            <img src="assets/images/Algotrick & Realty l.png" width="190" height="28" alt="Algotricks & Reality" data-aos="fade-down"
-           class="aos-init aos-animate" style="height: 250px; width: 300px; font-size: 80px; margin-top: 15px;">
+            <img src="assets/images/Algotrick & Realty l.png" alt="Algotrick & Realty Logo" class="logo-image">
           </a>
 
           <p class="body-medium footer-text">
             Building trust in real estate through innovation, technology, and exceptional service. Your dream property is our priority.
           </p>
+
+          <div class="newsletter" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="newsletter-title title-small">Subscribe to Our Newsletter</h3>
+            <p class="newsletter-text body-medium">Get the latest property listings and market insights delivered to your inbox.</p>
+            <form class="newsletter-form" data-aos="fade-up" data-aos-delay="300">
+              <input type="email" placeholder="Your Email Address" class="newsletter-input body-medium" required>
+              <button type="submit" class="newsletter-btn btn-fill">
+                <span class="label-medium">Subscribe</span>
+                <span class="material-symbols-rounded" aria-hidden="true">send</span>
+              </button>
+            </form>
+          </div>
         </div>
 
         <nav class="footer-nav" aria-labelledby="nav-label-1" data-aos="fade-up" data-aos-delay="200">
-          <p class="title-small footer-list-title" id="nav-label-1">Quick link</p>
+          <p class="title-small footer-list-title" id="nav-label-1">Quick Links</p>
 
           <ul class="footer-list">
 
@@ -794,79 +957,112 @@
             </li>
 
             <li>
-              <a href="" class="body-medium footer-link">Sell</a>
+              <a href="#" class="body-medium footer-link">Sell</a>
             </li>
 
             <li>
               <a href="#" class="body-medium footer-link">Rent</a>
             </li>
 
+            <li>
+              <a href="#" class="body-medium footer-link">Properties</a>
+            </li>
+
+            <li>
+              <a href="#" class="body-medium footer-link">Agents</a>
+            </li>
+
           </ul>
         </nav>
 
         <nav class="footer-nav" aria-labelledby="nav-label-2" data-aos="fade-up" data-aos-delay="300">
-          <p class="title-small footer-list-title" id="nav-label-2">Support</p>
+          <p class="title-small footer-list-title" id="nav-label-2">Services</p>
 
           <ul class="footer-list">
 
             <li>
-              <a href="#" class="body-medium footer-link">About us</a>
+              <a href="#" class="body-medium footer-link">Property Management</a>
             </li>
 
             <li>
-              <a href="#" class="body-medium footer-link">Contact us</a>
+              <a href="#" class="body-medium footer-link">Investment Advisory</a>
             </li>
 
             <li>
-              <a href="#" class="body-medium footer-link">Privacy Policy</a>
+              <a href="#" class="body-medium footer-link">Home Loans</a>
             </li>
 
             <li>
-              <a href="#" class="body-medium footer-link">Terms & Conditions</a>
+              <a href="#" class="body-medium footer-link">Legal Services</a>
+            </li>
+
+            <li>
+              <a href="#" class="body-medium footer-link">Property Valuation</a>
+            </li>
+
+            <li>
+              <a href="#" class="body-medium footer-link">Interior Design</a>
             </li>
 
           </ul>
         </nav>
 
         <nav class="footer-nav" aria-labelledby="nav-label-3" data-aos="fade-up" data-aos-delay="400">
-          <p class="title-small footer-list-title" id="nav-label-3">Get in touch</p>
+          <p class="title-small footer-list-title" id="nav-label-3">Company</p>
 
           <ul class="footer-list">
 
             <li>
-              <a href="#" class="body-medium footer-link">sales@algotrick.com</a>
+              <a href="#" class="body-medium footer-link">About Us</a>
+            </li>
+
+            <li>
+              <a href="#" class="body-medium footer-link">Our Team</a>
+            </li>
+
+            <li>
+              <a href="#" class="body-medium footer-link">Careers</a>
+            </li>
+
+            <li>
+              <a href="#" class="body-medium footer-link">Blog</a>
+            </li>
+
+            <li>
+              <a href="#" class="body-medium footer-link">News</a>
+            </li>
+
+            <li>
+              <a href="#" class="body-medium footer-link">Contact Us</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-labelledby="nav-label-4" data-aos="fade-up" data-aos-delay="500">
+          <p class="title-small footer-list-title" id="nav-label-4">Get in Touch</p>
+
+          <ul class="footer-list">
+
+            <li>
+              <a href="mailto:sales@algotrick.com" class="body-medium footer-link">
+                <span class="material-symbols-rounded" aria-hidden="true">email</span>
+                sales@algotrick.com
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+919876543210" class="body-medium footer-link">
+                <span class="material-symbols-rounded" aria-hidden="true">call</span>
+                +91 98765 43210
+              </a>
             </li>
 
             <li>
               <address class="address body-medium">
-                📍 Gurugram, Haryana, India
+                <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
+                Gurugram, Haryana, India
               </address>
-            </li>
-
-            <li>
-              
-              <ul class="social-list">
-
-                <li>
-                  <a href="#" class="social-link">
-                    <img src="./assets/images/facebook.svg" alt="facebook">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="social-link">
-                    <img src="./assets/images/twitter.svg" alt="twitter">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="social-link">
-                    <img src="./assets/images/insta.svg" alt="instagram">
-                  </a>
-                </li>
-
-              </ul>
-
             </li>
 
           </ul>
@@ -878,15 +1074,23 @@
     <div class="footer-bottom">
       <div class="container">
 
-        <p class="copyright body-medium">
-        © 2026 Algotricks Realty. All Rights Reserved.Your Property Our Priority
-        </p>
+        <div class="footer-legal" data-aos="fade-up" data-aos-delay="600">
+          <p class="copyright body-medium">
+            © 2026 Algotricks Realty. All Rights Reserved. Your Property, Our Priority.
+          </p>
+
+          <ul class="legal-links">
+            <li><a href="#" class="body-medium">Privacy Policy</a></li>
+            <li><a href="#" class="body-medium">Terms of Service</a></li>
+            <li><a href="#" class="body-medium">Cookie Policy</a></li>
+          </ul>
+        </div>
 
       </div>
     </div>
 
   </footer>
-  
+
   <!-- 
     - AOS JS and initialization
   -->
@@ -894,12 +1098,12 @@
   <script>
     // Initialize AOS with custom settings
     AOS.init({
-      duration: 800, // Animation duration in milliseconds
-      offset: 100, // Offset (in px) from the original trigger point
-      delay: 0, // Default delay for animations
-      easing: 'ease-in-out', // Default easing for AOS animations
-      once: true, // Animation happens only once - while scrolling down
-      mirror: false, // Whether elements should animate out while scrolling past them
+      duration: 800,
+      offset: 100,
+      delay: 0,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
     });
   </script>
 

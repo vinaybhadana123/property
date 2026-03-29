@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Property - Algotrick & Realty</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+</head>
+<body>
+<section class="rent-section">
+
+  <!-- HEADER -->
+  <div class="rent-header">
+    <img src="../assets/images/Algotrick & Realty l.png" class="rent-logo">
+    <h2>Rent Your Dream Property</h2>
+    <p>Find the perfect rental property with our extensive listings and expert guidance</p>
+  </div>
+
+  <!-- SEARCH & FILTER -->
+  <div class="rent-search-container">
+    <div class="rent-search-bar">
+      <input type="text" placeholder="Search by location, property type, or keyword" class="rent-search-input">
+      <button class="rent-search-btn">
+        <span class="material-symbols-rounded">search</span>
+        Search
+      </button>
+    </div>
+    
+    <div class="rent-filters">
+      <select class="rent-filter-select">
+        <option value="">Property Type</option>
+        <option>Apartment</option>
+        <option>Villa</option>
+        <option>House</option>
+        <option>Studio</option>
+        <option>Shared</option>
+      </select>
+      
+      <select class="rent-filter-select">
+        <option value="">Bedrooms</option>
+        <option>1+</option>
+        <option>2+</option>
+        <option>3+</option>
+        <option>4+</option>
+      </select>
+      
+      <select class="rent-filter-select">
+        <option value="">Budget (Monthly)</option>
+        <option>Under ₹10,000</option>
+        <option>₹10,000 - ₹20,000</option>
+        <option>₹20,000 - ₹40,000</option>
+        <option>₹40,000 - ₹60,000</option>
+        <option>₹60,000+</option>
+      </select>
+      
+      <select class="rent-filter-select">
+        <option value="">Location</option>
+        <option>Gurugram</option>
+        <option>Dehradun</option>
+        <option>Sonipat</option>
+        <option>Haridwar</option>
+        <option>Other</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- PROPERTY LISTINGS -->
+  <div class="rent-property-grid">
+    
+    <!-- Property Card 1 -->
+    <div class="rent-card">
+      <div class="rent-card-banner">
+        <img src="../assets/images/Peaceful Residential Home, Dehradun City, 248001.webp" alt="Modern Apartment" class="rent-card-img">
+        <span class="rent-badge">Available</span>
+        <button class="rent-fav-btn">
+          <span class="material-symbols-rounded">favorite_border</span>
+        </button>
+      </div>
+      <div class="rent-card-content">
+        <div class="rent-price">₹18,000 <span class="rent-price-unit">/ month</span></div>
+        <h3 class="rent-card-title">Modern 2BHK Apartment</h3>
+        <p class="rent-card-location">Sector 45, Gurugram</p>
+        <div class="rent-card-features">
+          <span class="rent-feature">2 Beds</span>
+          <span class="rent-feature">2 Baths</span>
+          <span class="rent-feature">850 sqft</span>
+          <span class="rent-feature">Furnished</span>
+        </div>
+        <div class="rent-card-amenities">
+          <span class="rent-amenity">Swimming Pool</span>
+          <span class="rent-amenity">Gym</span>
+          <span class="rent-amenity">Parking</span>
+        </div>
+        <div class="rent-card-actions">
+          <button class="rent-view-btn">View Details</button>
+          <button class="rent-contact-btn">Contact Agent</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property Card 2 -->
+    <div class="rent-card">
+      <div class="rent-card-banner">
+        <img src="../assets/images/sector 45.jpg" alt="Luxury Villa" class="rent-card-img">
+        <span class="rent-badge rent-badge-premium">Premium</span>
+        <button class="rent-fav-btn">
+          <span class="material-symbols-rounded">favorite_border</span>
+        </button>
+      </div>
+      <div class="rent-card-content">
+        <div class="rent-price">₹45,000 <span class="rent-price-unit">/ month</span></div>
+        <h3 class="rent-card-title">Luxury 4BHK Villa</h3>
+        <p class="rent-card-location">Pataudi Road, Gurgaon</p>
+        <div class="rent-card-features">
+          <span class="rent-feature">4 Beds</span>
+          <span class="rent-feature">5 Baths</span>
+          <span class="rent-feature">2200 sqft</span>
+          <span class="rent-feature">Fully Furnished</span>
+        </div>
+        <div class="rent-card-amenities">
+          <span class="rent-amenity">Private Pool</span>
+          <span class="rent-amenity">Garden</span>
+          <span class="rent-amenity">Security</span>
+          <span class="rent-amenity">Guest House</span>
+        </div>
+        <div class="rent-card-actions">
+          <button class="rent-view-btn">View Details</button>
+          <button class="rent-contact-btn">Contact Agent</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property Card 3 -->
+    <div class="rent-card">
+      <div class="rent-card-banner">
+        <img src="../assets/images/Investment Ready Plot, Sector 6, Jhajjar 124103.jpg" alt="Studio Apartment" class="rent-card-img">
+        <span class="rent-badge">New Listing</span>
+        <button class="rent-fav-btn">
+          <span class="material-symbols-rounded">favorite_border</span>
+        </button>
+      </div>
+      <div class="rent-card-content">
+        <div class="rent-price">₹12,000 <span class="rent-price-unit">/ month</span></div>
+        <h3 class="rent-card-title">Cozy Studio Apartment</h3>
+        <p class="rent-card-location">Sector 6, Jhajjar</p>
+        <div class="rent-card-features">
+          <span class="rent-feature">1 Bed</span>
+          <span class="rent-feature">1 Bath</span>
+          <span class="rent-feature">500 sqft</span>
+          <span class="rent-feature">Semi-Furnished</span>
+        </div>
+        <div class="rent-card-amenities">
+          <span class="rent-amenity">Gym</span>
+          <span class="rent-amenity">Parking</span>
+          <span class="rent-amenity">24/7 Water</span>
+        </div>
+        <div class="rent-card-actions">
+          <button class="rent-view-btn">View Details</button>
+          <button class="rent-contact-btn">Contact Agent</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property Card 4 -->
+    <div class="rent-card">
+      <div class="rent-card-banner">
+        <img src="../assets/images/Modern Commercial Space, Kharkhoda Industrial Area, Sonipat 131402.jpg" alt="Family Home" class="rent-card-img">
+        <span class="rent-badge">Family Friendly</span>
+        <button class="rent-fav-btn">
+          <span class="material-symbols-rounded">favorite_border</span>
+        </button>
+      </div>
+      <div class="rent-card-content">
+        <div class="rent-price">₹28,000 <span class="rent-price-unit">/ month</span></div>
+        <h3 class="rent-card-title">Spacious 3BHK House</h3>
+        <p class="rent-card-location">Kharkhoda Industrial Area, Sonipat</p>
+        <div class="rent-card-features">
+          <span class="rent-feature">3 Beds</span>
+          <span class="rent-feature">3 Baths</span>
+          <span class="rent-feature">1600 sqft</span>
+          <span class="rent-feature">Fully Furnished</span>
+        </div>
+        <div class="rent-card-amenities">
+          <span class="rent-amenity">Garden</span>
+          <span class="rent-amenity">Parking</span>
+          <span class="rent-amenity">Security</span>
+          <span class="rent-amenity">School Nearby</span>
+        </div>
+        <div class="rent-card-actions">
+          <button class="rent-view-btn">View Details</button>
+          <button class="rent-contact-btn">Contact Agent</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RENTAL TIPS -->
+  <div class="rent-tips-section">
+    <h3 class="rent-tips-title">Rental Tips & Guidelines</h3>
+    <div class="rent-tips-grid">
+      <div class="rent-tip-card">
+        <span class="material-symbols-rounded rent-tip-icon">verified</span>
+        <h4>Verify Documents</h4>
+        <p>Always check property documents and ownership before signing any agreement.</p>
+      </div>
+      <div class="rent-tip-card">
+        <span class="material-symbols-rounded rent-tip-icon">payments</span>
+        <h4>Understand Terms</h4>
+        <p>Clear understanding of rent, deposit, maintenance, and notice period terms.</p>
+      </div>
+      <div class="rent-tip-card">
+        <span class="material-symbols-rounded rent-tip-icon">home</span>
+        <h4>Inspect Property</h4>
+        <p>Visit the property personally and check all amenities and utilities.</p>
+      </div>
+      <div class="rent-tip-card">
+        <span class="material-symbols-rounded rent-tip-icon">gavel</span>
+        <h4>Legal Agreement</h4>
+        <p>Ensure proper rental agreement with all terms clearly mentioned.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<section class="rent-footer">
+  <h2>Find Your Perfect Rental Home Today</h2>
+  <p>With <strong>Algotrick & Realty</strong>, renting your dream property is easy and hassle-free. We offer verified listings and expert guidance throughout your rental journey.</p>
+  <button class="rent-help-btn">Get Rental Assistance</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

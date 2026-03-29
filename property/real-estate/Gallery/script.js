@@ -4,7 +4,15 @@ const galleryItems = [
   { src: "https://images.unsplash.com/photo-1505691938895-1758d7feb511", type: "plot", title: "Residential Plot" },
   { src: "https://images.unsplash.com/photo-1497366216548-37526070297c", type: "office", title: "Office Space" },
   { src: "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4", type: "property", title: "Premium Villa" },
-  { src: "https://images.unsplash.com/photo-1505691723518-36a5ac3be353", type: "plot", title: "Scenic Land" }
+  { src: "https://images.unsplash.com/photo-1505691723518-36a5ac3be353", type: "plot", title: "Scenic Land" },
+  { src: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b", type: "property", title: "Living Room Design" },
+  { src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0", type: "property", title: "Modern Kitchen" },
+  { src: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68", type: "property", title: "Master Bedroom" },
+  { src: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde", type: "property", title: "Garden View" },
+  { src: "https://images.unsplash.com/photo-1430285561322-7808604715df", type: "property", title: "Blue Cottage" },
+  { src: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf", type: "plot", title: "Poolside Plot" },
+  { src: "https://images.unsplash.com/photo-1497215728101-856f4ea42174", type: "office", title: "Executive Suite" },
+  { src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6", type: "property", title: "Sunset Mansion" }
 ];
 
 const grid = document.getElementById("galleryGrid");

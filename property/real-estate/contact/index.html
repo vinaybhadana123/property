@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Algotrick Realty</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Custom JS -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="contact-header">
+    <div class="container">
+      <div class="logo">
+        <img src="../assets/images/Algotrick & Realty l.png" alt="Algotrick Realty Logo" class="logo-image">
+      </div>
+      <nav class="contact-nav">
+        <a href="../index.html">Home</a>
+        <a href="../buy/index.html">Buy</a>
+        <a href="../sell/index.html">Sell</a>
+        <a href="#" class="active">Contact Us</a>
+        <a href="../Gallery/index.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="contact-hero" data-aos="fade-up">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Get In Touch With Us</h1>
+        <p class="hero-subtitle">We're here to help you find your dream property. Contact us today for expert real estate guidance.</p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Customer Support</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">5000+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="../assets/images/Luxury modern 2 .png" alt="Luxury Property" class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Information Section -->
+  <section class="contact-info-section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Contact Information</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">
+            <span class="material-symbols-rounded">location_on</span>
+          </div>
+          <h3>Our Address</h3>
+          <p>Plot No. 123, Sector 45<br>Gurugram, Haryana 122003<br>India</p>
+          <a href="#" class="info-link">Get Directions</a>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <span class="material-symbols-rounded">call</span>
+          </div>
+          <h3>Phone Numbers</h3>
+          <p><strong>Office:</strong> +91 124 456 7890<br><strong>24/7 Support:</strong> +91 98765 43210<br><strong>Sales:</strong> +91 87654 32109</p>
+          <a href="tel:+919876543210" class="info-link">Call Now</a>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <span class="material-symbols-rounded">email</span>
+          </div>
+          <h3>Email Us</h3>
+          <p><strong>General:</strong> info@algotrick.com<br><strong>Sales:</strong> sales@algotrick.com<br><strong>Support:</strong> support@algotrick.com</p>
+          <a href="mailto:info@algotrick.com" class="info-link">Send Email</a>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <span class="material-symbols-rounded">schedule</span>
+          </div>
+          <h3>Business Hours</h3>
+          <p><strong>Monday - Saturday:</strong> 9:00 AM - 8:00 PM<br><strong>Sunday:</strong> 10:00 AM - 6:00 PM<br><strong>Holidays:</strong> By Appointment</p>
+          <a href="#" class="info-link">Schedule Appointment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-form-section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Send Us a Message</h2>
+      <p class="form-subtitle">Fill out the form below and our team will get back to you as soon as possible</p>
+      
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            <span class="error-message" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            <span class="error-message" id="emailError"></span>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            <span class="error-message" id="phoneError"></span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option>Property Inquiry</option>
+              <option>Selling Property</option>
+              <option>Renting Property</option>
+              <option>Investment Opportunity</option>
+              <option>Partnership</option>
+              <option>General Question</option>
+              <option>Complaint</option>
+            </select>
+            <span class="error-message" id="subjectError"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="propertyType">Property Type</label>
+            <select id="propertyType" name="propertyType">
+              <option value="">Select property type</option>
+              <option value="villa">Villa</option>
+              <option value="apartment">Apartment</option>
+              <option value="house">House</option>
+              <option value="plot">Plot</option>
+              <option value="commercial">Commercial</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">Budget Range</label>
+            <select id="budget" name="budget">
+              <option value="">Select budget range</option>
+              <option value="under50l">Under ₹50 Lakh</option>
+              <option value="50l-1cr">₹50 Lakh - ₹1 Crore</option>
+              <option value="1cr-2cr">₹1 Crore - ₹2 Crore</option>
+              <option value="2cr-5cr">₹2 Crore - ₹5 Crore</option>
+              <option value="above5cr">Above ₹5 Crore</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell us about your property needs..." required></textarea>
+          <span class="error-message" id="messageError"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <span class="checkmark"></span>
+            Subscribe to our newsletter for property updates and market insights
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <button type="reset" class="btn btn-secondary">Clear Form</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Our Expert Team Section -->
+  <section class="team-section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Our Expert Team</h2>
+      <p class="section-subtitle">Meet our dedicated team of real estate professionals committed to your success</p>
+      <div class="team-grid">
+        <div class="agent-card">
+          <div class="agent-photo">
+            <img src="../assets/images/ankush.jpeg" alt="Ankush Sharma">
+            <div class="agent-overlay">
+              <div class="overlay-content">
+                <span class="material-symbols-rounded">call</span>
+                <span>+91 98765 43210</span>
+              </div>
+            </div>
+          </div>
+          <div class="agent-info">
+            <h3>Ankush Sharma</h3>
+            <p class="agent-title">Senior Property Consultant</p>
+            <p class="agent-specialty">Residential Properties</p>
+            <div class="agent-stats">
+              <span class="stat-item">500+ Properties Sold</span>
+              <span class="stat-item">4.9/5 Client Rating</span>
+            </div>
+            <div class="agent-social">
+              <a href="#" class="social-link">
+                <span class="material-symbols-rounded">call</span>
+              </a>
+              <a href="#" class="social-link">
+                <span class="material-symbols-rounded">email</span>
+              </a>
+              <a href="#" class="social-link">
+                <span class="material-symbols-rounded">chat</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-card">
+          <div class="agent-photo">
+            <img src="../assets/images/kapil.jpeg" alt="Kapil Mehta">
+            <div class="agent-overlay">
+              <div class="overlay-content">
+                <span class="material-symbols-rounded">call</span>
+                <span>+91 87654 32109</span>
+              </div>
+            </div>
+          </div>
+          <div class="agent-info">
+            <h3>Kapil Mehta</h3>
+            <p class="agent-title">Commercial Properties Head</p>
+            <p class="agent-specialty">Commercial & Investment</p>
+            <div class="agent-stats">
+              <span class="stat-item">200+ Commercial Deals</span>
+              <span class="stat-item">4.8/5 Client Rating</span>
+            </div>
+            <div class="agent-social">
+              <a href="#" class="social-link">
+                <span class="material-symbols-rounded">call</span>
+              </a>
+              <a href="#" class="social-link">
+                <span class="material-symbols-rounded">email</span>
+              </a>
+              <a href="#" class="social-link">
+                <span class="material-symbols-rounded">chat</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-card">
+          <div class="agent-photo">
+            <img src="../assets/images/deepanshu.jpeg" alt="Deepanshu Gupta">
+            <div class="agent-overlay">
+              <div class="overlay-content">
+                <span class="material-symbols-rounded">call</span>
+                <span>+91 76543 21098</span>
+              </div>
+            </div>
+          </div>
+          <div class="agent-info">
+            <h3>Deepanshu Gupta</h3>
+            <p class="agent-title">Investment Advisor</p>
+            <p class="agent-specialty">Plot & Land Investment</p>
+            <div class="agent-stats">
+              <span class="stat-item">1000+ Investment Clients</span>
+              <span class="stat-item">4.9/5 ROI Rating</span>
+            </div>
+            <div class="agent-social">
+              <a href="#" class="social-link">
+                <span class="material-symbols-rounded">call</span>
+              </a>
+              <a href="#" class="social-link">
+                <span class="material-symbols-rounded">email</span>
+              </a>
+              <a href="#" class="social-link">
+                <span class="material-symbols-rounded">chat</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-card">
+          <div class="agent-photo">
+            <img src="../assets/images/yuvraj.png" alt="Yuvraj Singh">
+            <div class="agent-overlay">
+              <div class="overlay-content">
+                <span class="material-symbols-rounded">call</span>
+                <span>+91 65432 10987</span>
+              </div>
+            </div>
+          </div>
+          <div class="agent-info">
+            <h3>Yuvraj Singh</h3>
+            <p class="agent-title">Customer Relations Manager</p>
+            <p class="agent-specialty">Client Services</p>
+            <div class="agent-stats">
+              <span class="stat-item">24/7 Availability</span>
+              <span class="stat-item">4.9/5 Service Rating</span>
+            </div>
+            <div class="agent-social">
+              <a href="#" class="social-link">
+                <span class="material-symbols-rounded">call</span>
+              </a>
+              <a href="#" class="social-link">
+                <span class="material-symbols-rounded">email</span>
+              </a>
+              <a href="#" class="social-link">
+                <span class="material-symbols-rounded">chat</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Contact Section -->
+  <section class="quick-contact-section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Quick Contact</h2>
+      <div class="quick-contact-grid">
+        <div class="quick-contact-card">
+          <div class="quick-icon">
+            <span class="material-symbols-rounded">call</span>
+          </div>
+          <h3>Emergency Support</h3>
+          <p>+91 98765 43210</p>
+          <a href="tel:+919876543210" class="quick-btn">Call Now</a>
+        </div>
+        <div class="quick-contact-card">
+          <div class="quick-icon">
+            <span class="material-symbols-rounded">chat</span>
+          </div>
+          <h3>Live Chat</h3>
+          <p>Available 24/7</p>
+          <a href="#" class="quick-btn">Start Chat</a>
+        </div>
+        <div class="quick-contact-card">
+          <div class="quick-icon">
+            <span class="material-symbols-rounded">video_call</span>
+          </div>
+          <h3>Video Consultation</h3>
+          <p>Book Appointment</p>
+          <a href="#" class="quick-btn">Book Now</a>
+        </div>
+        <div class="quick-contact-card">
+          <div class="quick-icon">
+            <span class="material-symbols-rounded">home</span>
+          </div>
+          <h3>Property Visit</h3>
+          <p>Schedule Tour</p>
+          <a href="#" class="quick-btn">Schedule</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="contact-testimonials" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"The team at Algotrick Realty provided excellent service. They were responsive, professional, and helped us find our dream home in just 2 weeks!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="../assets/images/ankush.jpeg" alt="Ankush Sharma">
+            </div>
+            <div class="author-info">
+              <h4>Ankush Sharma</h4>
+              <span>Home Buyer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"I was impressed by their prompt responses and expert guidance. They made the entire property buying process smooth and stress-free."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="../assets/images/kapil.jpeg" alt="Kapil Mehta">
+            </div>
+            <div class="author-info">
+              <h4>Kapil Mehta</h4>
+              <span>Investor</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Their customer service is outstanding. Even after the deal was closed, they continued to provide support and assistance."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="../assets/images/deepanshu.jpeg" alt="Deepanshu Gupta">
+            </div>
+            <div class="author-info">
+              <h4>Deepanshu Gupta</h4>
+              <span>Property Seller</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="contact-cta" data-aos="fade-up">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Start Your Property Journey?</h2>
+        <p>Whether you're buying, selling, renting, or investing, our expert team is ready to assist you every step of the way.</p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary">Get Started Today</a>
+          <a href="#" class="btn btn-secondary">Schedule Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="contact-footer">
+    <div class="container">
+      <h2>We're Here to Serve You</h2>
+      <p>At <strong>Algotrick & Realty</strong>, we believe in building lasting relationships with our clients. Whether you're buying, selling, renting, or investing, our team is dedicated to providing exceptional service and expert guidance every step of the way.</p>
+      <div class="footer-contact">
+        <a href="tel:+919876543210" class="contact-btn">
+          <span class="material-symbols-rounded">call</span>
+          +91 98765 43210
+        </a>
+        <a href="mailto:info@algotrick.com" class="contact-btn">
+          <span class="material-symbols-rounded">email</span>
+          info@algotrick.com
+        </a>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-link">
+          <span class="material-symbols-rounded">facebook</span>
+        </a>
+        <a href="#" class="social-link">
+          <span class="material-symbols-rounded">instagram</span>
+        </a>
+        <a href="#" class="social-link">
+          <span class="material-symbols-rounded">twitter</span>
+        </a>
+        <a href="#" class="social-link">
+          <span class="material-symbols-rounded">linkedin</span>
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+      <p class="copyright">© 2026 Algotricks Realty. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AOS Initialization -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      offset: 100,
+      delay: 0,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+    });
+  </script>
+</body>
+</html>

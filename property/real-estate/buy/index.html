@@ -3,81 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>buy</title>
+  <title>Buy Properties | Algotrick Realty</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Custom JS -->
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <section class="buy-section">
+  <!-- Navigation -->
+  <header class="buy-header">
+    <div class="container">
+      <div class="logo">
+        <img src="Algotrick & Realty l.png" alt="Algotrick Realty Logo" class="logo-image">
+      </div>
+      <nav class="buy-nav">
+        <a href="../index.html">Home</a>
+        <a href="#" class="active">Buy</a>
+        <a href="../sell/index.html">Sell</a>
+        <a href="../contact/index.html">Contact Us</a>
+        <a href="../Gallery/index.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- HEADER WITH LOGO -->
-  <div class="buy-header">
-    <img src="Algotrick & Realty l.png" class="buy-logo">
-    <h2>Find Your Dream Property</h2>
-  </div>
+  <!-- Premium Buy Section -->
+  <section class="buy-section" data-aos="fade-up">
+    <div class="container">
+      <div class="buy-content">
+        <div class="buy-text">
+          <h1 class="buy-title">Find Your Dream Property</h1>
+          <p class="buy-subtitle">Discover premium properties across Gurgaon, Dehradun, Sonipat, and beyond with our expert guidance</p>
+        </div>
+        
+        <div class="buy-form-container">
+          <form class="buy-form" id="buyForm">
+            <div class="form-group">
+              <label for="location">Location</label>
+              <div class="input-wrapper">
+                <span class="material-symbols-rounded input-icon">location_on</span>
+                <input type="text" id="location" name="location" placeholder="Enter city, neighborhood, or zip code" required>
+              </div>
+            </div>
 
-  <!-- FILTERS -->
-  <div class="filters">
-    <input type="text" id="search" placeholder="Search location...">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="propertyType">Property Type</label>
+                <div class="input-wrapper">
+                  <span class="material-symbols-rounded input-icon">home</span>
+                  <select id="propertyType" name="propertyType" required>
+                    <option value="">Select type</option>
+                    <option value="villa">Villa</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                    <option value="plot">Plot</option>
+                    <option value="commercial">Commercial</option>
+                  </select>
+                </div>
+              </div>
 
-    <select id="type">
-      <option value="">Property Type</option>
-      <option value="villa">Villa</option>
-      <option value="apartment">Apartment</option>
-      <option value="plot">Plot</option>
-    </select>
+              <div class="form-group">
+                <label for="budget">Budget Range</label>
+                <div class="input-wrapper">
+                  <span class="material-symbols-rounded input-icon">payments</span>
+                  <select id="budget" name="budget" required>
+                    <option value="">Select budget</option>
+                    <option value="under50l">Under ₹50 Lakh</option>
+                    <option value="50l-1cr">₹50 Lakh - ₹1 Crore</option>
+                    <option value="1cr-2cr">₹1 Crore - ₹2 Crore</option>
+                    <option value="2cr-5cr">₹2 Crore - ₹5 Crore</option>
+                    <option value="above5cr">Above ₹5 Crore</option>
+                  </select>
+                </div>
+              </div>
+            </div>
 
-    <select id="bedrooms">
-      <option value="">Bedrooms</option>
-      <option value="3">3 BHK</option>
-      <option value="4">4 BHK</option>
-      <option value="5">5 BHK</option>
-      <option value="8">8 BHK</option>
-    </select>
+            <div class="form-group">
+              <label>Purpose</label>
+              <div class="toggle-container">
+                <button type="button" class="toggle-btn active" data-value="buy">Buy</button>
+                <button type="button" class="toggle-btn" data-value="rent">Rent</button>
+                <input type="hidden" id="purpose" name="purpose" value="buy">
+              </div>
+            </div>
 
-    <select id="price">
-      <option value="">Price Range</option>
-      <option value="low">Below 50L</option>
-      <option value="mid">50L - 1Cr</option>
-      <option value="high">Above 1Cr</option>
-    </select>
-  </div>
+            <button type="submit" class="search-btn">
+              <span class="search-icon">🔍</span>
+              <span class="search-text">Search Now</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- PROPERTY GRID -->
-  <div class="property-container" id="propertyContainer"></div>
+  <!-- Features Section -->
+  <section class="buy-features" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Why Choose Our Buying Services?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <span class="material-symbols-rounded">verified</span>
+          </div>
+          <h3>Verified Properties</h3>
+          <p>Every property is thoroughly verified for legal compliance and authenticity</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <span class="material-symbols-rounded">location_on</span>
+          </div>
+          <h3>Prime Locations</h3>
+          <p>Handpicked properties in the most desirable locations</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <span class="material-symbols-rounded">trending_up</span>
+          </div>
+          <h3>Investment Value</h3>
+          <p>Properties with high appreciation potential and excellent ROI</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <span class="material-symbols-rounded">support_agent</span>
+          </div>
+          <h3>Expert Guidance</h3>
+          <p>Personalized assistance throughout your property journey</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <!-- CTA Section -->
+  <section class="buy-cta" data-aos="fade-up">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Find Your Dream Home?</h2>
+        <p>Contact us today to speak with one of our expert real estate agents and start your journey to finding the perfect property.</p>
+        <div class="cta-buttons">
+          <a href="../contact/index.html" class="btn btn-primary">Contact Us</a>
+          <a href="#" class="btn btn-secondary">View All Properties</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="buy-footer">
+    <div class="container">
+      <h2>Your Property, Our Priority</h2>
+      <p>
+        Discover premium properties across Gurgaon, Uttarakhand, Haridwar, and beyond. 
+        At <strong>Algotrick & Realty</strong>, we are committed to helping you find 
+        the perfect home, investment, or commercial space with trust, transparency, 
+        and excellence.
+      </p>
+      <div class="footer-contact">
+        <a href="tel:+919876543210" class="contact-btn">
+          <span class="material-symbols-rounded">call</span>
+          +91 98765 43210
+        </a>
+        <a href="mailto:info@algotrick.com" class="contact-btn">
+          <span class="material-symbols-rounded">email</span>
+          info@algotrick.com
+        </a>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-link">
+          <span class="material-symbols-rounded">facebook</span>
+        </a>
+        <a href="#" class="social-link">
+          <span class="material-symbols-rounded">instagram</span>
+        </a>
+        <a href="#" class="social-link">
+          <span class="material-symbols-rounded">twitter</span>
+        </a>
+        <a href="#" class="social-link">
+          <span class="material-symbols-rounded">linkedin</span>
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+      <p class="copyright">© 2026 Algotricks Realty. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-
-<!-- extra properties -->
-
-<section class="extra-properties">
-
-  <h2 class="extra-title">Featured Premium Properties</h2>
-
-  <div class="extra-container" id="extraContainer"></div>
-
-</section>
-
-
-
-
-<!-- footer properties -->
-<section class="buy-footer">
-
-  <h2>Your Property, Our Priority</h2>
-
-  <p>
-    Discover premium properties across Gurgaon, Uttarakhand, Haridwar, and beyond. 
-    At <strong>Algotrick & Realty</strong>, we are committed to helping you find 
-    the perfect home, investment, or commercial space with trust, transparency, 
-    and excellence.
-  </p>
-
-  <button class="contact-btn">Contact Us</button>
-
-</section>
-
-<script src="script.js"></script>
+  <!-- AOS Initialization -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      offset: 100,
+      delay: 0,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+    });
+  </script>
 </body>
 </html>
