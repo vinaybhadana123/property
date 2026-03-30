@@ -3,108 +3,926 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>About Algotrick & Realty | Premium Real Estate</title>
+    
+    <!-- CSS Variables for Theme -->
+    <style>
+        :root {
+            --primary-color: #ffd700;
+            --primary-gradient: linear-gradient(135deg, #ffd700, #ff6b6b);
+            --secondary-color: #ff6b6b;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-dark: #1a1a1a;
+            --bg-dark: #0f0f0f;
+            --bg-darker: #0a0a0a;
+            --bg-card: rgba(255, 255, 255, 0.05);
+            --bg-card-hover: rgba(255, 215, 0, 0.1);
+            --border-color: rgba(255, 215, 0, 0.3);
+            --shadow-glow: 0 0 20px rgba(255, 215, 0, 0.3);
+            --shadow-deep: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --transition-speed: 0.3s;
+            --border-radius: 16px;
+        }
+
+        /* Dark mode overrides */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-primary: #ffffff;
+                --text-secondary: #b0b0b0;
+                --text-dark: #1a1a1a;
+                --bg-dark: #0f0f0f;
+                --bg-darker: #0a0a0a;
+                --bg-card: rgba(255, 255, 255, 0.05);
+                --bg-card-hover: rgba(255, 215, 0, 0.1);
+                --border-color: rgba(255, 215, 0, 0.3);
+            }
+        }
+
+        /* Light mode overrides */
+        @media (prefers-color-scheme: light) {
+            :root {
+                --text-primary: #1a1a1a;
+                --text-secondary: #666666;
+                --text-dark: #1a1a1a;
+                --bg-dark: #f8f9fa;
+                --bg-darker: #ffffff;
+                --bg-card: rgba(255, 255, 255, 0.8);
+                --bg-card-hover: rgba(255, 215, 0, 0.1);
+                --border-color: rgba(255, 215, 0, 0.5);
+                --shadow-deep: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--text-primary);
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* Navigation Header */
+        .about-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 15, 15, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all var(--transition-speed) ease;
+        }
+
+        .about-header.scrolled {
+            background: rgba(15, 15, 15, 0.95);
+            box-shadow: var(--shadow-deep);
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-image {
+            width: 220px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+        }
+
+        .about-nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+            transition: all var(--transition-speed) ease;
+            padding: 0.5rem 0;
+        }
+
+        .about-nav a:hover {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .about-nav a.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .about-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .about-hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--bg-dark), var(--bg-darker));
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero-title {
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Story Section */
+        .about-story {
+            padding: 6rem 0;
+            background: linear-gradient(to bottom, var(--bg-dark), var(--bg-darker));
+        }
+
+        .story-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .story-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .story-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .founder-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .founder-section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-glow), var(--shadow-deep);
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+
+        .founder-title {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .founder-quote {
+            font-style: italic;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .founder-quote::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 3rem;
+            color: var(--primary-color);
+            opacity: 0.3;
+        }
+
+        .story-image {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-deep);
+            height: 500px;
+            background: linear-gradient(135deg, #1a1a1a, #333333);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Stats Section */
+        .about-stats {
+            padding: 4rem 0;
+            background: var(--bg-darker);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: all var(--transition-speed) ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-glow), var(--shadow-deep);
+            border-color: rgba(255, 215, 0, 0.5);
+            background: var(--bg-card-hover);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-family: 'Space Grotesk', monospace;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose {
+            padding: 6rem 0;
+            background: linear-gradient(to bottom, var(--bg-darker), var(--bg-dark));
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            transition: all var(--transition-speed) ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-glow), var(--shadow-deep);
+            border-color: rgba(255, 215, 0, 0.5);
+            background: var(--bg-card-hover);
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .why-card:hover .why-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: rgba(255, 215, 0, 0.2);
+        }
+
+        .why-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .why-text {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Values Section */
+        .about-values {
+            padding: 4rem 0;
+            background: var(--bg-dark);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .value-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-glow), var(--shadow-deep);
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+
+        .value-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .value-title {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .value-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        .about-footer {
+            background: var(--bg-dark);
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 2rem;
+        }
+
+        .footer-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            max-width: 600px;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .footer-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .cta-btn:hover {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+
+            .story-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .story-image {
+                height: 300px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid .stat-card {
+                text-align: left;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Animation Classes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .animate-left {
+            animation: fadeInLeft 0.8s ease-out;
+        }
+
+        .animate-right {
+            animation: fadeInRight 0.8s ease-out;
+        }
+
+        /* Scrollbar Customization */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-darker);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffd700;
+        }
+    </style>
 </head>
 <body>
-    <section class="about-section">
+    <!-- Navigation Header -->
+    <header class="about-header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="Algotrick & Realty l.png" alt="Algotrick & Realty Logo" class="logo-image">
+            </a>
 
-  <!-- HEADER -->
-  <div class="about-header">
-    <img src="Algotrick & Realty l.png" class="about-logo">
-    <h2>About Algotrick & Realty</h2>
-    <p class="tagline">Your Property Our Priority</p>
-  </div>
+            <nav class="about-nav">
+                <a href="../index.html">Home</a>
+                <a href="../buy/index.html">Buy</a>
+                <a href="../sell/index.html">Sell</a>
+                <a href="../contact/index.html">Contact</a>
+                <a href="../Gallery/index.html">Gallery</a>
+                <a href="#" class="active">About</a>
+            </nav>
+        </div>
+    </header>
 
-  <!-- MAIN GRID -->
-  <div class="about-grid">
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1 class="hero-title animate-in">About Our Company</h1>
+            <p class="hero-subtitle animate-in">
+                Building trust in real estate through innovation, technology, and exceptional service. 
+                Your dream property is our priority.
+            </p>
+        </div>
+    </section>
 
-    <!-- LEFT CONTENT -->
-    <div class="about-left">
-      <h3>Who We Are</h3>
-      <p>
-        Founded by <strong>Amit Kumar Trivedi</strong>, Algotrick & Realty is a 
-        modern real estate platform based at SVH Metro Street 83, Gurugram 
-        (near Dwarka Expressway). We specialize in connecting buyers and sellers 
-        with premium residential, commercial, and investment properties.
-      </p>
+    <!-- Story Section -->
+    <section class="about-story">
+        <div class="container">
+            <div class="story-container">
+                <div class="story-content animate-left">
+                    <h2>Our Story</h2>
+                    <p class="story-text">
+                        Founded with a vision to revolutionize the real estate industry, Algotrick & Realty 
+                        has grown from a small startup into one of the most trusted names in Indian real estate. 
+                        Our journey began with a simple mission: to make property transactions transparent, 
+                        efficient, and stress-free for everyone.
+                    </p>
+                    
+                    <p class="story-text">
+                        Over the years, we've helped thousands of families find their dream homes, 
+                        assisted investors in making profitable decisions, and guided sellers through 
+                        seamless transactions. Our commitment to excellence and customer satisfaction 
+                        has been the cornerstone of our success.
+                    </p>
 
-      <h3>Our Mission</h3>
-      <p>
-        To simplify property buying and selling with transparency, trust, and 
-        a technology-driven approach.
-      </p>
+                    <div class="founder-section">
+                        <div class="founder-title">Founder's Vision</div>
+                        <p class="founder-quote">
+                            "We believe that every property transaction should be a celebration, 
+                            not a burden. Our goal is to bring transparency, trust, and technology 
+                            to an industry that has long needed innovation."
+                        </p>
+                        <div style="margin-top: 1rem; font-weight: 600; color: var(--primary-color);">
+                            — Amit Kumar Trivedi, Founder & CEO
+                        </div>
+                    </div>
+                </div>
 
-      <h3>Our Vision</h3>
-      <p>
-        To become a leading real estate brand in India known for reliability, 
-        premium listings, and customer satisfaction.
-      </p>
-    </div>
+                <div class="story-image animate-right">
+                    <div style="text-align: center;">
+                        <div style="font-size: 4rem; color: var(--primary-color); margin-bottom: 1rem;">🏢</div>
+                        <div style="font-size: 1.5rem; font-weight: 600;">Premium Real Estate</div>
+                        <div style="margin-top: 1rem; color: var(--text-secondary);">
+                            Since 2015 • 1000+ Happy Clients • 50+ Locations
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- RIGHT CONTACT -->
-    <div class="about-right">
-      <h3>Contact Info</h3>
-      <p>📍 SVH Metro Street 83, Gurugram, Haryana - 122012</p>
-      <p>📞 +91 9217673211</p>
-      <p>💬 WhatsApp: +91 9217673211</p>
-      <p>📧 sales@algotrick.com</p>
+    <!-- Stats Section -->
+    <section class="about-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up">
+                    <span class="stat-icon">🏆</span>
+                    <div class="stat-number" id="yearsCounter">10</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
 
-      <button onclick="contactNow()" class="about-btn">Contact Now</button>
-    </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="stat-icon">🏠</span>
+                    <div class="stat-number" id="propertiesCounter">5000</div>
+                    <div class="stat-label">Properties Sold</div>
+                </div>
 
-  </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="stat-icon">😊</span>
+                    <div class="stat-number" id="clientsCounter">3000</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
 
-  <!-- STATS -->
-  <div class="about-stats">
-    <div class="stat">
-      <h2>500+</h2>
-      <p>Properties</p>
-    </div>
-    <div class="stat">
-      <h2>300+</h2>
-      <p>Clients</p>
-    </div>
-    <div class="stat">
-      <h2>50+</h2>
-      <p>Locations</p>
-    </div>
-    <div class="stat">
-      <h2>100%</h2>
-      <p>Trusted</p>
-    </div>
-  </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <span class="stat-icon">📍</span>
+                    <div class="stat-number" id="locationsCounter">50</div>
+                    <div class="stat-label">Locations Covered</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- SERVICES -->
-  <div class="about-services">
-    <h3>Our Services</h3>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2>Why Choose Us</h2>
+                <p style="max-width: 600px; margin: 1rem auto 0; color: var(--text-secondary);">
+                    We go beyond traditional real estate services to provide you with an exceptional experience
+                </p>
+            </div>
 
-    <div class="services-grid">
-      <div class="service-box">🏡 Property Buying</div>
-      <div class="service-box">💰 Property Selling</div>
-      <div class="service-box">📊 Investment Advice</div>
-      <div class="service-box">📍 Location Expertise</div>
-    </div>
-  </div>
+            <div class="why-grid">
+                <div class="why-card" data-aos="fade-up">
+                    <div class="why-icon">🔒</div>
+                    <h3 class="why-title">Trusted Service</h3>
+                    <p class="why-text">
+                        With over a decade of experience, we've built a reputation for honesty, 
+                        integrity, and reliability in every transaction.
+                    </p>
+                </div>
 
-  <!-- MAP -->
-  <div class="about-map">
-    <iframe 
-      src="https://maps.google.com/maps?q=svh%20metro%20street%2083%20gurugram&t=&z=13&ie=UTF8&iwloc=&output=embed"
-      loading="lazy">
-    </iframe>
-  </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-icon">✨</div>
+                    <h3 class="why-title">Transparent Deals</h3>
+                    <p class="why-text">
+                        No hidden fees, no surprises. We believe in complete transparency 
+                        throughout the entire process.
+                    </p>
+                </div>
 
-</section>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-icon">👥</div>
+                    <h3 class="why-title">Expert Team</h3>
+                    <p class="why-text">
+                        Our team of certified professionals brings extensive market knowledge 
+                        and negotiation expertise to every deal.
+                    </p>
+                </div>
 
-<!-- CTA FOOTER -->
-<section class="about-footer">
-  <h2>Let’s Find Your Dream Property</h2>
-  <p>Trusted real estate solutions in Gurgaon and beyond</p>
-  <button onclick="contactNow()">Get Started</button>
-</section>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-icon">⚡</div>
+                    <h3 class="why-title">Fast Process</h3>
+                    <p class="why-text">
+                        Leveraging technology and streamlined processes to ensure quick, 
+                        efficient transactions without compromising quality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Values Section -->
+    <section class="about-values">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2>Our Core Values</h2>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-item" data-aos="fade-up">
+                    <span class="value-icon">💎</span>
+                    <div class="value-title">Excellence</div>
+                    <div class="value-text">We strive for perfection in every detail</div>
+                </div>
+
+                <div class="value-item" data-aos="fade-up" data-aos-delay="100">
+                    <span class="value-icon">🤝</span>
+                    <div class="value-title">Integrity</div>
+                    <div class="value-text">Honesty and ethics guide our every action</div>
+                </div>
+
+                <div class="value-item" data-aos="fade-up" data-aos-delay="200">
+                    <span class="value-icon">❤️</span>
+                    <div class="value-title">Customer First</div>
+                    <div class="value-text">Your needs come before our profits</div>
+                </div>
+
+                <div class="value-item" data-aos="fade-up" data-aos-delay="300">
+                    <span class="value-icon">🚀</span>
+                    <div class="value-title">Innovation</div>
+                    <div class="value-text">Embracing technology for better service</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="about-footer">
+        <div class="container">
+            <div class="footer-content">
+                <h2 class="footer-title">Ready to Start Your Journey?</h2>
+                <p class="footer-text">
+                    Let us help you find your dream property or achieve the best value for your sale. 
+                    Contact us today for a consultation.
+                </p>
+
+                <div class="footer-cta">
+                    <a href="../contact/index.html" class="cta-btn">
+                        <span>📞</span>
+                        <span>Get in Touch</span>
+                    </a>
+                    <a href="../buy/index.html" class="cta-btn">
+                        <span>🏠</span>
+                        <span>Find Properties</span>
+                    </a>
+                </div>
+
+                <div class="copyright">
+                    © 2026 Algotrick & Realty. All Rights Reserved. Your Property, Our Priority.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Counter Animation Script -->
+    <script>
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, 16);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    const target = parseInt(element.getAttribute('data-target'));
+                    
+                    if (target) {
+                        animateCounter(element, target);
+                    }
+                    
+                    observer.unobserve(element);
+                }
+            });
+        }, observerOptions);
+
+        // Observe counter elements
+        document.querySelectorAll('[id$="Counter"]').forEach(el => {
+            const target = el.textContent;
+            el.setAttribute('data-target', target);
+            el.textContent = '0';
+            observer.observe(el);
+        });
+
+        // Scroll animation for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.about-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Add AOS-like functionality
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-in, .animate-left, .animate-right');
+            const windowHeight = window.innerHeight;
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll();
+    </script>
 </body>
 </html>

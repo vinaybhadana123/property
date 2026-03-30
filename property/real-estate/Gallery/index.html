@@ -39,33 +39,12 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Gallery Hero Section -->
   <section class="gallery-hero" data-aos="fade-up">
     <div class="container">
       <div class="hero-content">
-        <h1 class="hero-title">Our Property Gallery</h1>
-        <p class="hero-subtitle">Explore our premium property portfolio and find inspiration for your next real estate investment</p>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">500+</span>
-            <span class="stat-label">Properties Listed</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">100+</span>
-            <span class="stat-label">Plots Available</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">50+</span>
-            <span class="stat-label">Commercial Spaces</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">24/7</span>
-            <span class="stat-label">Virtual Tours</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="../assets/images/Luxury modern 2 .png" alt="Luxury Property" class="hero-img">
+        <h1 class="hero-title">Premium Property Gallery</h1>
+        <p class="hero-subtitle">Discover exceptional properties through our curated visual collection</p>
       </div>
     </div>
   </section>
@@ -73,14 +52,12 @@
   <!-- Gallery Filters Section -->
   <section class="gallery-filters-section" data-aos="fade-up">
     <div class="container">
-      <h2 class="section-title">Browse Our Collection</h2>
       <div class="filters-container">
-        <button class="filter-btn active" data-filter="all">All Properties</button>
-        <button class="filter-btn" data-filter="properties">Properties</button>
-        <button class="filter-btn" data-filter="plots">Plots</button>
-        <button class="filter-btn" data-filter="office">Office Spaces</button>
+        <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="villa">Villas</button>
         <button class="filter-btn" data-filter="apartment">Apartments</button>
+        <button class="filter-btn" data-filter="interior">Interiors</button>
+        <button class="filter-btn" data-filter="plot">Plots</button>
       </div>
     </div>
   </section>
@@ -90,32 +67,15 @@
     <div class="container">
       <div class="gallery-grid" id="galleryGrid">
         <!-- Gallery Item 1 -->
-        <div class="gallery-item" data-category="properties" data-aos="fade-up">
+        <div class="gallery-item" data-category="villa" data-aos="fade-up">
           <div class="gallery-image">
             <img src="../assets/images/sector 45.jpg" alt="Luxury Villa">
             <div class="gallery-overlay">
               <div class="overlay-content">
                 <h3>Luxury Villa</h3>
-                <p>₹1.2Cr • 4 BHK • 2200 sqft</p>
-                <div class="overlay-actions">
-                  <button class="gallery-btn">View Details</button>
-                  <button class="gallery-fav-btn" aria-label="Add to favorites">
-                    <span class="material-symbols-rounded">favorite_border</span>
-                  </button>
-                </div>
+                <span class="overlay-category">Villa</span>
               </div>
             </div>
-          </div>
-          <div class="gallery-info">
-            <span class="gallery-badge">Featured</span>
-            <h4>Luxury Villa</h4>
-            <p class="gallery-location">Sector 45, Gurugram</p>
-            <div class="gallery-meta">
-              <span class="meta-item">4 BHK</span>
-              <span class="meta-item">2200 sqft</span>
-              <span class="meta-item">Swimming Pool</span>
-            </div>
-            <div class="gallery-price">₹1.2Cr</div>
           </div>
         </div>
 
@@ -126,341 +86,138 @@
             <div class="gallery-overlay">
               <div class="overlay-content">
                 <h3>Modern Apartment</h3>
-                <p>₹72L • 3 BHK • 1240 sqft</p>
-                <div class="overlay-actions">
-                  <button class="gallery-btn">View Details</button>
-                  <button class="gallery-fav-btn" aria-label="Add to favorites">
-                    <span class="material-symbols-rounded">favorite_border</span>
-                  </button>
-                </div>
+                <span class="overlay-category">Apartment</span>
               </div>
             </div>
-          </div>
-          <div class="gallery-info">
-            <span class="gallery-badge">New</span>
-            <h4>Modern Apartment</h4>
-            <p class="gallery-location">Kharkhoda, Sonipat</p>
-            <div class="gallery-meta">
-              <span class="meta-item">3 BHK</span>
-              <span class="meta-item">1240 sqft</span>
-              <span class="meta-item">Gym</span>
-            </div>
-            <div class="gallery-price">₹72L</div>
           </div>
         </div>
 
         <!-- Gallery Item 3 -->
-        <div class="gallery-item" data-category="plots" data-aos="fade-up">
+        <div class="gallery-item" data-category="plot" data-aos="fade-up">
           <div class="gallery-image">
             <img src="../assets/images/Investment Ready Plot, Sector 6, Jhajjar 124103.jpg" alt="Investment Plot">
             <div class="gallery-overlay">
               <div class="overlay-content">
                 <h3>Investment Plot</h3>
-                <p>₹85.5L • 1200 sqft • Prime Location</p>
-                <div class="overlay-actions">
-                  <button class="gallery-btn">View Details</button>
-                  <button class="gallery-fav-btn" aria-label="Add to favorites">
-                    <span class="material-symbols-rounded">favorite_border</span>
-                  </button>
-                </div>
+                <span class="overlay-category">Plot</span>
               </div>
             </div>
-          </div>
-          <div class="gallery-info">
-            <span class="gallery-badge">Investment</span>
-            <h4>Investment Plot</h4>
-            <p class="gallery-location">Sector 6, Jhajjar</p>
-            <div class="gallery-meta">
-              <span class="meta-item">1200 sqft</span>
-              <span class="meta-item">Prime Location</span>
-              <span class="meta-item">High ROI</span>
-            </div>
-            <div class="gallery-price">₹85.5L</div>
           </div>
         </div>
 
         <!-- Gallery Item 4 -->
-        <div class="gallery-item" data-category="office" data-aos="fade-up">
+        <div class="gallery-item" data-category="villa" data-aos="fade-up">
           <div class="gallery-image">
-            <img src="../assets/images/Luxury Villa Property, Pataudi Road, Gurgaon 122504.jpg" alt="Office Space">
+            <img src="../assets/images/Luxury Villa Property, Pataudi Road, Gurgaon 122504.jpg" alt="Executive Villa">
             <div class="gallery-overlay">
               <div class="overlay-content">
-                <h3>Office Space</h3>
-                <p>₹1.45Cr • Commercial • Prime Location</p>
-                <div class="overlay-actions">
-                  <button class="gallery-btn">View Details</button>
-                  <button class="gallery-fav-btn" aria-label="Add to favorites">
-                    <span class="material-symbols-rounded">favorite_border</span>
-                  </button>
-                </div>
+                <h3>Executive Villa</h3>
+                <span class="overlay-category">Villa</span>
               </div>
             </div>
-          </div>
-          <div class="gallery-info">
-            <span class="gallery-badge">Commercial</span>
-            <h4>Office Space</h4>
-            <p class="gallery-location">Pataudi Road, Gurgaon</p>
-            <div class="gallery-meta">
-              <span class="meta-item">Commercial</span>
-              <span class="meta-item">Prime Location</span>
-              <span class="meta-item">High ROI</span>
-            </div>
-            <div class="gallery-price">₹1.45Cr</div>
           </div>
         </div>
 
         <!-- Gallery Item 5 -->
-        <div class="gallery-item" data-category="properties" data-aos="fade-up">
+        <div class="gallery-item" data-category="apartment" data-aos="fade-up">
           <div class="gallery-image">
-            <img src="../assets/images/Peaceful Residential Home, Dehradun City, 248001.webp" alt="Family Home">
+            <img src="../assets/images/Peaceful Residential Home, Dehradun City, 248001.webp" alt="Family Apartment">
             <div class="gallery-overlay">
               <div class="overlay-content">
-                <h3>Family Home</h3>
-                <p>₹68.9L • 4 BHK • 1580 sqft</p>
-                <div class="overlay-actions">
-                  <button class="gallery-btn">View Details</button>
-                  <button class="gallery-fav-btn" aria-label="Add to favorites">
-                    <span class="material-symbols-rounded">favorite_border</span>
-                  </button>
-                </div>
+                <h3>Family Apartment</h3>
+                <span class="overlay-category">Apartment</span>
               </div>
             </div>
-          </div>
-          <div class="gallery-info">
-            <span class="gallery-badge">Family</span>
-            <h4>Family Home</h4>
-            <p class="gallery-location">Dehradun City</p>
-            <div class="gallery-meta">
-              <span class="meta-item">4 BHK</span>
-              <span class="meta-item">1580 sqft</span>
-              <span class="meta-item">Garden</span>
-            </div>
-            <div class="gallery-price">₹68.9L</div>
           </div>
         </div>
 
         <!-- Gallery Item 6 -->
-        <div class="gallery-item" data-category="plots" data-aos="fade-up">
+        <div class="gallery-item" data-category="plot" data-aos="fade-up">
           <div class="gallery-image">
             <img src="../assets/images/Scenic Plot for Living, Rishikesh Riverside Area, 249201.jpg" alt="Scenic Plot">
             <div class="gallery-overlay">
               <div class="overlay-content">
                 <h3>Scenic Plot</h3>
-                <p>₹95.75L • 1120 sqft • Riverside</p>
-                <div class="overlay-actions">
-                  <button class="gallery-btn">View Details</button>
-                  <button class="gallery-fav-btn" aria-label="Add to favorites">
-                    <span class="material-symbols-rounded">favorite_border</span>
-                  </button>
-                </div>
+                <span class="overlay-category">Plot</span>
               </div>
             </div>
-          </div>
-          <div class="gallery-info">
-            <span class="gallery-badge">Scenic</span>
-            <h4>Scenic Plot</h4>
-            <p class="gallery-location">Rishikesh Riverside</p>
-            <div class="gallery-meta">
-              <span class="meta-item">1120 sqft</span>
-              <span class="meta-item">Riverside</span>
-              <span class="meta-item">Scenic Views</span>
-            </div>
-            <div class="gallery-price">₹95.75L</div>
           </div>
         </div>
 
         <!-- Gallery Item 7 -->
         <div class="gallery-item" data-category="villa" data-aos="fade-up">
           <div class="gallery-image">
-            <img src="../assets/images/Luxury modern 2 .png" alt="Executive Home">
+            <img src="../assets/images/Luxury modern 2 .png" alt="Modern Villa">
             <div class="gallery-overlay">
               <div class="overlay-content">
-                <h3>Executive Home</h3>
-                <p>₹1.45Cr • 8 BHK • 1950 sqft</p>
-                <div class="overlay-actions">
-                  <button class="gallery-btn">View Details</button>
-                  <button class="gallery-fav-btn" aria-label="Add to favorites">
-                    <span class="material-symbols-rounded">favorite_border</span>
-                  </button>
-                </div>
+                <h3>Modern Villa</h3>
+                <span class="overlay-category">Villa</span>
               </div>
             </div>
-          </div>
-          <div class="gallery-info">
-            <span class="gallery-badge">Executive</span>
-            <h4>Executive Home</h4>
-            <p class="gallery-location">Premium Location</p>
-            <div class="gallery-meta">
-              <span class="meta-item">8 BHK</span>
-              <span class="meta-item">1950 sqft</span>
-              <span class="meta-item">Luxury Amenities</span>
-            </div>
-            <div class="gallery-price">₹1.45Cr</div>
           </div>
         </div>
 
         <!-- Gallery Item 8 -->
-        <div class="gallery-item" data-category="office" data-aos="fade-up">
+        <div class="gallery-item" data-category="interior" data-aos="fade-up">
           <div class="gallery-image">
-            <img src="../assets/images/Modern Commercial Space, Kharkhoda Industrial Area, Sonipat 131402.jpg" alt="Commercial Complex">
+            <img src="../assets/images/Modern Commercial Space, Kharkhoda Industrial Area, Sonipat 131402.jpg" alt="Luxury Interior">
             <div class="gallery-overlay">
               <div class="overlay-content">
-                <h3>Commercial Complex</h3>
-                <p>Custom Pricing • Prime Location • High ROI</p>
-                <div class="overlay-actions">
-                  <button class="gallery-btn">View Details</button>
-                  <button class="gallery-fav-btn" aria-label="Add to favorites">
-                    <span class="material-symbols-rounded">favorite_border</span>
-                  </button>
-                </div>
+                <h3>Luxury Interior</h3>
+                <span class="overlay-category">Interior</span>
               </div>
             </div>
           </div>
-          <div class="gallery-info">
-            <span class="gallery-badge">Commercial</span>
-            <h4>Commercial Complex</h4>
-            <p class="gallery-location">Prime Business District</p>
-            <div class="gallery-meta">
-              <span class="meta-item">Custom Pricing</span>
-              <span class="meta-item">Prime Location</span>
-              <span class="meta-item">High ROI</span>
-            </div>
-            <div class="gallery-price">Custom</div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Property Features Section -->
-  <section class="gallery-features" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">Property Features</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <span class="material-symbols-rounded">home</span>
+        <!-- Gallery Item 9 -->
+        <div class="gallery-item" data-category="villa" data-aos="fade-up">
+          <div class="gallery-image">
+            <img src="../assets/images/sector 45.jpg" alt="Contemporary Villa">
+            <div class="gallery-overlay">
+              <div class="overlay-content">
+                <h3>Contemporary Villa</h3>
+                <span class="overlay-category">Villa</span>
+              </div>
+            </div>
           </div>
-          <h3>Luxury Homes</h3>
-          <p>Premium residential properties with modern amenities and elegant designs that offer the perfect blend of comfort and sophistication.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <span class="material-symbols-rounded">location_on</span>
-          </div>
-          <h3>Prime Locations</h3>
-          <p>Properties in the best locations with excellent connectivity, infrastructure, and proximity to essential amenities and business districts.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <span class="material-symbols-rounded">trending_up</span>
-          </div>
-          <h3>High ROI</h3>
-          <p>Investment opportunities with excellent return potential and growth prospects, carefully selected for maximum appreciation.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <span class="material-symbols-rounded">verified</span>
-          </div>
-          <h3>Verified Properties</h3>
-          <p>All properties thoroughly verified for authenticity, legal compliance, and market value to ensure complete peace of mind.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <span class="material-symbols-rounded">pool</span>
-          </div>
-          <h3>Luxury Amenities</h3>
-          <p>Properties featuring premium amenities including swimming pools, gyms, landscaped gardens, and 24/7 security services.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <span class="material-symbols-rounded">eco</span>
-          </div>
-          <h3>Sustainable Living</h3>
-          <p>Eco-friendly properties with energy-efficient designs, solar panels, rainwater harvesting, and green building certifications.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Virtual Tour Section -->
-  <section class="virtual-tour" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">Virtual Property Tour</h2>
-      <div class="tour-container">
-        <div class="tour-image">
-          <img src="../assets/images/Luxury modern 2 .png" alt="Virtual Tour">
-          <div class="tour-overlay">
-            <button class="tour-btn">
-              <span class="material-symbols-rounded">play_circle</span>
-              Start Virtual Tour
-            </button>
+        <!-- Gallery Item 10 -->
+        <div class="gallery-item" data-category="apartment" data-aos="fade-up">
+          <div class="gallery-image">
+            <img src="../assets/images/Modern Commercial Space, Kharkhoda Industrial Area, Sonipat 131402.jpg" alt="Urban Apartment">
+            <div class="gallery-overlay">
+              <div class="overlay-content">
+                <h3>Urban Apartment</h3>
+                <span class="overlay-category">Apartment</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="tour-content">
-          <h3>Experience Properties Virtually</h3>
-          <p>Take a virtual tour of our premium properties from the comfort of your home. Explore every room, check the views, and get a feel for the space before scheduling a physical visit.</p>
-          <ul class="tour-features">
-            <li><span class="material-symbols-rounded">check_circle</span> 360° Virtual Views</li>
-            <li><span class="material-symbols-rounded">check_circle</span> Interactive Floor Plans</li>
-            <li><span class="material-symbols-rounded">check_circle</span> Real-time Availability</li>
-            <li><span class="material-symbols-rounded">check_circle</span> Professional Photography</li>
-            <li><span class="material-symbols-rounded">check_circle</span> Live Agent Support</li>
-            <li><span class="material-symbols-rounded">check_circle</span> Instant Booking</li>
-          </ul>
-          <div class="tour-actions">
-            <button class="btn btn-primary">Book Virtual Tour</button>
-            <button class="btn btn-secondary">View Demo</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Testimonials Section -->
-  <section class="gallery-testimonials" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">Client Experiences</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p>"The gallery helped us visualize our dream home before even visiting. The virtual tour was incredibly detailed and realistic!"</p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <img src="../assets/images/ankush.jpeg" alt="Ankush Sharma">
-            </div>
-            <div class="author-info">
-              <h4>Ankush Sharma</h4>
-              <span>Home Buyer</span>
+        <!-- Gallery Item 11 -->
+        <div class="gallery-item" data-category="interior" data-aos="fade-up">
+          <div class="gallery-image">
+            <img src="../assets/images/Investment Ready Plot, Sector 6, Jhajjar 124103.jpg" alt="Modern Interior">
+            <div class="gallery-overlay">
+              <div class="overlay-content">
+                <h3>Modern Interior</h3>
+                <span class="overlay-category">Interior</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p>"I found the perfect investment property through their gallery. The detailed information and high-quality images made all the difference."</p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <img src="../assets/images/kapil.jpeg" alt="Kapil Mehta">
-            </div>
-            <div class="author-info">
-              <h4>Kapil Mehta</h4>
-              <span>Investor</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p>"The gallery's organization and filters made it easy to find exactly what we were looking for. Excellent user experience!"</p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <img src="../assets/images/deepanshu.jpeg" alt="Deepanshu Gupta">
-            </div>
-            <div class="author-info">
-              <h4>Deepanshu Gupta</h4>
-              <span>Property Investor</span>
+
+        <!-- Gallery Item 12 -->
+        <div class="gallery-item" data-category="plot" data-aos="fade-up">
+          <div class="gallery-image">
+            <img src="../assets/images/Scenic Plot for Living, Rishikesh Riverside Area, 249201.jpg" alt="Prime Plot">
+            <div class="gallery-overlay">
+              <div class="overlay-content">
+                <h3>Prime Plot</h3>
+                <span class="overlay-category">Plot</span>
+              </div>
             </div>
           </div>
         </div>
@@ -468,25 +225,33 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="gallery-cta" data-aos="fade-up">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Explore Our Properties?</h2>
-        <p>Discover your perfect property from our extensive gallery. Whether you're looking for a family home, investment opportunity, or commercial space, we have something for everyone.</p>
-        <div class="cta-buttons">
-          <a href="../contact/index.html" class="btn btn-primary">Contact Our Team</a>
-          <a href="#" class="btn btn-secondary">Schedule Property Tour</a>
+  <!-- Gallery Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose">
+        <span class="material-symbols-rounded">close</span>
+      </button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+        <span class="material-symbols-rounded">chevron_left</span>
+      </button>
+      <div class="lightbox-image-container">
+        <img src="" alt="" id="lightboxImage">
+        <div class="lightbox-info">
+          <h3 id="lightboxTitle">Property Title</h3>
+          <span id="lightboxCategory">Category</span>
         </div>
       </div>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext">
+        <span class="material-symbols-rounded">chevron_right</span>
+      </button>
     </div>
-  </section>
+  </div>
 
   <!-- Footer -->
   <footer class="gallery-footer">
     <div class="container">
-      <h2>Find Your Perfect Property</h2>
-      <p>With <strong>Algotrick & Realty</strong>, explore our extensive gallery of premium properties. From luxury homes to investment opportunities, we have the perfect property for every need.</p>
+      <h2>Explore Our Collection</h2>
+      <p>Discover premium properties through our carefully curated gallery. Each image represents excellence in design, location, and value.</p>
       <div class="footer-contact">
         <a href="tel:+919876543210" class="contact-btn">
           <span class="material-symbols-rounded">call</span>
@@ -510,11 +275,6 @@
         <a href="#" class="social-link">
           <span class="material-symbols-rounded">linkedin</span>
         </a>
-      </div>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Cookie Policy</a>
       </div>
       <p class="copyright">© 2026 Algotricks Realty. All Rights Reserved.</p>
     </div>
