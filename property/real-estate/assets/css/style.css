@@ -272,6 +272,12 @@ body {
   #REUSED STYLE
 \*-----------------------------------*/
 
+/* Ensure all images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .material-symbols-rounded {
   display: inline-block;
   width: 1em;
@@ -568,7 +574,6 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  box-shadow: var(--shadow-4);
 }
 
 [data-theme="dark"] .header {
@@ -2215,6 +2220,7 @@ body {
   font-weight: 800;
   color: var(--primary-100);
   display: block;
+  display: block;
   margin-bottom: var(--space-2);
 }
 
@@ -2934,6 +2940,39 @@ body {
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+/* Additional Media Queries for Enhanced Responsiveness */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 3rem; /* Adjust hero title size */
+  }
+
+  .body-large {
+    font-size: 1.4rem; /* Adjust body text size */
+  }
+
+  .property-list {
+    grid-template-columns: 1fr; /* Stack property cards on small screens */
+  }
+
+  .footer .container {
+    grid-template-columns: 1fr; /* Stack footer items */
+  }
+
+  .search-bar {
+    grid-template-columns: 1fr; /* Stack search bar items */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-8) 0; /* Adjust padding for hero section */
+  }
+
+  .navbar-mobile {
+    width: 100%; /* Full width for mobile navbar */
+  }
+}
 
 /* Mobile First */
 @media (max-width: 767px) {
