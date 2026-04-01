@@ -110,7 +110,7 @@ p {
 
 /* Navigation Header */
 .gallery-header {
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   z-index: 1000;
   background: rgba(15, 15, 15, 0.9);
