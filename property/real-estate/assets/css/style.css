@@ -956,7 +956,8 @@ img {
 
 /* Remove old navbar styles */
 .navbar {
-  display: none;
+  height: 100px; /* Set navbar height to 100px */
+  /* existing styles */
 }
 
 .navbar-list {
@@ -3439,7 +3440,7 @@ body {
   top: 0;
   left: -100%;
   width: 300px;
-  height: 100vh;
+  height: 20vh;
   background: var(--bg-primary);
   border-right: 1px solid var(--border-color);
   box-shadow: var(--shadow-5);
