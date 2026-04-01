@@ -51,7 +51,6 @@ class ThemeManager {
     this.setTheme(this.currentTheme, false);
     this.bindEvents();
   }
-
   setTheme(theme, animate = true) {
     this.currentTheme = theme;
     document.body.setAttribute('data-theme', theme);
