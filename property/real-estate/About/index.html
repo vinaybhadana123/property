@@ -5,52 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Algotrick & Realty | Premium Real Estate</title>
     
-    <!-- CSS Variables for Theme -->
+    <!-- CSS Variables for Unified Premium Light Theme -->
     <style>
         :root {
-            --primary-color: #ffd700;
-            --primary-gradient: linear-gradient(135deg, #ffd700, #ff6b6b);
-            --secondary-color: #ff6b6b;
-            --text-primary: #ffffff;
-            --text-secondary: #b0b0b0;
-            --text-dark: #1a1a1a;
-            --bg-dark: #0f0f0f;
-            --bg-darker: #0a0a0a;
-            --bg-card: rgba(255, 255, 255, 0.05);
-            --bg-card-hover: rgba(255, 215, 0, 0.1);
-            --border-color: rgba(255, 215, 0, 0.3);
-            --shadow-glow: 0 0 20px rgba(255, 215, 0, 0.3);
-            --shadow-deep: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --primary-color: #5b7cda;
+            --primary-gradient: linear-gradient(135deg, #5b7cda 0%, #7c63d8 50%, #9a5cd4 100%);
+            --secondary-color: #10b981;
+            --accent-color: #ec8c63;
+            --text-primary: #0d1117;
+            --text-secondary: #324152;
+            --text-tertiary: #5a6b7a;
+            --text-quaternary: #8a9aab;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fb;
+            --bg-tertiary: #f1f3f8;
+            --bg-quaternary: #e8ecf5;
+            --border-color: #d5dce5;
+            --border-hover: #c0cad8;
+            --bg-card: rgba(255, 255, 255, 0.95);
+            --bg-card-hover: rgba(91, 124, 218, 0.06);
+            --shadow-glow: 0 0 30px rgba(91, 124, 218, 0.15);
+            --shadow-deep: 0 10px 30px rgba(91, 124, 218, 0.12);
+            --shadow-elevated: 0 12px 30px rgba(91, 124, 218, 0.18);
             --transition-speed: 0.3s;
             --border-radius: 16px;
         }
 
-        /* Dark mode overrides */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text-primary: #ffffff;
-                --text-secondary: #b0b0b0;
-                --text-dark: #1a1a1a;
-                --bg-dark: #0f0f0f;
-                --bg-darker: #0a0a0a;
-                --bg-card: rgba(255, 255, 255, 0.05);
-                --bg-card-hover: rgba(255, 215, 0, 0.1);
-                --border-color: rgba(255, 215, 0, 0.3);
-            }
-        }
-
-        /* Light mode overrides */
+        /* Light mode is default - no changes needed */
         @media (prefers-color-scheme: light) {
             :root {
-                --text-primary: #1a1a1a;
-                --text-secondary: #666666;
-                --text-dark: #1a1a1a;
-                --bg-dark: #f8f9fa;
-                --bg-darker: #ffffff;
-                --bg-card: rgba(255, 255, 255, 0.8);
-                --bg-card-hover: rgba(255, 215, 0, 0.1);
-                --border-color: rgba(255, 215, 0, 0.5);
-                --shadow-deep: 0 10px 30px rgba(0, 0, 0, 0.1);
+                --text-primary: #0d1117;
+                --text-secondary: #324152;
+                --bg-primary: #ffffff;
+                --bg-secondary: #f8f9fb;
+                --bg-card: rgba(255, 255, 255, 0.95);
+                --bg-card-hover: rgba(91, 124, 218, 0.06);
+                --border-color: #d5dce5;
+                --shadow-deep: 0 10px 30px rgba(91, 124, 218, 0.12);
             }
         }
 
@@ -67,7 +58,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--bg-dark);
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 50%, #f1f3f8 100%);
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
@@ -97,7 +88,11 @@
 
         h2 {
             font-size: 2.5rem;
-            color: var(--text-primary);
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
         }
 
         h3 {
@@ -113,75 +108,70 @@
 
         /* Navigation Header */
         .about-header {
-            /* position:fixed; */
+            position: sticky;
             top: 0;
-            z-index: 1000;
-            background: rgba(15, 15, 15, 0.9);
+            width: 100%;
+            background: linear-gradient(
+                135deg,
+                rgba(15, 23, 42, 0.95),
+                rgba(30, 41, 59, 0.9),
+                rgba(51, 65, 85, 0.85)
+            );
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            transition: all var(--transition-speed) ease;
+            z-index: 1000;
         }
 
-        .about-header.scrolled {
-            background: rgba(15, 15, 15, 0.95);
-            box-shadow: var(--shadow-deep);
-        }
-
-        .container {
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 40px;
+            height: 80px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 1rem 0;
         }
 
-        .logo {
+        /* .logo {
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 8px 14px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            transition: 0.3s ease;
+        } */
+
+        .logo:hover {
+            background: rgba(255, 255, 255, 0.12);
         }
 
         .logo-image {
-            width: 150px;
-            height: auto;
+            height: 150px;
             object-fit: contain;
-            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
         }
 
         .about-nav {
             display: flex;
-            gap: 2rem;
-            align-items: center;
+            gap: 35px;
         }
 
         .about-nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
+            font-size: 16px !important;
             font-weight: 500;
-            font-size: 1rem;
-            position: relative;
-            transition: all var(--transition-speed) ease;
-            padding: 0.5rem 0;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
         }
 
         .about-nav a:hover {
-            color: var(--primary-color);
-            transform: translateY(-2px);
+            color: #5b7cda;
         }
 
         .about-nav a.active {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .about-nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary-gradient);
-            border-radius: 2px;
+            color: #5b7cda;
+            border-bottom: 2px solid #5b7cda;
+            padding-bottom: 4px;
         }
 
         /* Hero Section */
@@ -193,7 +183,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--bg-dark), var(--bg-darker));
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 50%, #f1f3f8 100%);
         }
 
         .about-hero::before {
@@ -203,7 +193,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at center, rgba(91, 124, 218, 0.08) 0%, transparent 50%);
             z-index: 1;
         }
 
@@ -215,7 +205,7 @@
 
         .hero-title {
             margin-bottom: 1rem;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 4px 20px rgba(91, 124, 218, 0.1);
         }
 
         .hero-subtitle {
@@ -228,7 +218,7 @@
         /* Story Section */
         .about-story {
             padding: 6rem 0;
-            background: linear-gradient(to bottom, var(--bg-dark), var(--bg-darker));
+            background: linear-gradient(135deg, rgba(248, 249, 251, 0.5) 0%, rgba(241, 243, 248, 0.8) 100%);
         }
 
         .story-container {
@@ -251,22 +241,27 @@
         }
 
         .founder-section {
-            background: var(--bg-card);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 251, 0.8) 100%);
             border: 1px solid var(--border-color);
             border-radius: var(--border-radius);
             padding: 2rem;
             transition: all var(--transition-speed) ease;
+            box-shadow: var(--shadow-elevated);
         }
 
         .founder-section:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-glow), var(--shadow-deep);
-            border-color: rgba(255, 215, 0, 0.5);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 249, 251, 0.95) 100%);
         }
 
         .founder-title {
             font-size: 1.3rem;
-            color: var(--primary-color);
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 1rem;
             font-weight: 600;
         }
@@ -285,21 +280,24 @@
             left: 0;
             top: -10px;
             font-size: 3rem;
-            color: var(--primary-color);
-            opacity: 0.3;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.4;
         }
 
         .story-image {
             position: relative;
             border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: var(--shadow-deep);
+            box-shadow: var(--shadow-elevated);
             height: 500px;
-            background: linear-gradient(135deg, #1a1a1a, #333333);
+            background: linear-gradient(135deg, #f8f9fb 0%, #f1f3f8 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-secondary);
+            color: var(--text-tertiary);
             font-size: 1.2rem;
             border: 1px solid var(--border-color);
         }
@@ -307,7 +305,7 @@
         /* Stats Section */
         .about-stats {
             padding: 4rem 0;
-            background: var(--bg-darker);
+            background: linear-gradient(135deg, rgba(248, 249, 251, 0.6) 0%, rgba(241, 243, 248, 0.9) 100%);
         }
 
         .stats-grid {
@@ -317,7 +315,7 @@
         }
 
         .stat-card {
-            background: var(--bg-card);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 251, 0.85) 100%);
             border: 1px solid var(--border-color);
             border-radius: var(--border-radius);
             padding: 2rem;
@@ -325,13 +323,14 @@
             transition: all var(--transition-speed) ease;
             position: relative;
             overflow: hidden;
+            box-shadow: var(--shadow-1, 0 1px 3px rgba(91, 124, 218, 0.08));
         }
 
         .stat-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow-glow), var(--shadow-deep);
-            border-color: rgba(255, 215, 0, 0.5);
-            background: var(--bg-card-hover);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 249, 251, 0.95) 100%);
         }
 
         .stat-icon {
@@ -344,7 +343,10 @@
         .stat-number {
             font-size: 3rem;
             font-weight: 800;
-            color: var(--primary-color);
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 0.5rem;
             font-family: 'Space Grotesk', monospace;
         }
@@ -360,7 +362,7 @@
         /* Why Choose Us Section */
         .why-choose {
             padding: 6rem 0;
-            background: linear-gradient(to bottom, var(--bg-darker), var(--bg-dark));
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
         }
 
         .why-grid {
@@ -370,26 +372,27 @@
         }
 
         .why-card {
-            background: var(--bg-card);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 251, 0.85) 100%);
             border: 1px solid var(--border-color);
             border-radius: var(--border-radius);
             padding: 2rem;
             transition: all var(--transition-speed) ease;
             position: relative;
             overflow: hidden;
+            box-shadow: var(--shadow-1, 0 1px 3px rgba(91, 124, 218, 0.08));
         }
 
         .why-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow-glow), var(--shadow-deep);
-            border-color: rgba(255, 215, 0, 0.5);
-            background: var(--bg-card-hover);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 249, 251, 0.95) 100%);
         }
 
         .why-icon {
             width: 60px;
             height: 60px;
-            background: rgba(255, 215, 0, 0.1);
+            background: rgba(91, 124, 218, 0.1);
             border: 2px solid var(--primary-color);
             border-radius: 50%;
             display: flex;
@@ -403,7 +406,7 @@
 
         .why-card:hover .why-icon {
             transform: scale(1.1) rotate(5deg);
-            background: rgba(255, 215, 0, 0.2);
+            background: rgba(91, 124, 218, 0.2);
         }
 
         .why-title {
@@ -420,7 +423,7 @@
         /* Values Section */
         .about-values {
             padding: 4rem 0;
-            background: var(--bg-dark);
+            background: linear-gradient(135deg, #f8f9fb 0%, #f1f3f8 100%);
         }
 
         .values-grid {
@@ -430,18 +433,19 @@
         }
 
         .value-item {
-            background: var(--bg-card);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 251, 0.9) 100%);
             border: 1px solid var(--border-color);
             border-radius: var(--border-radius);
             padding: 1.5rem;
             text-align: center;
             transition: all var(--transition-speed) ease;
+            box-shadow: var(--shadow-1, 0 1px 3px rgba(91, 124, 218, 0.08));
         }
 
         .value-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-glow), var(--shadow-deep);
-            border-color: rgba(255, 215, 0, 0.5);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--primary-color);
         }
 
         .value-icon {
@@ -465,9 +469,21 @@
 
         /* Footer */
         .about-footer {
-            background: var(--bg-dark);
-            border-top: 1px solid var(--border-color);
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
+            border-top: 2px solid var(--border-color);
             padding: 4rem 0 2rem;
+            position: relative;
+        }
+
+        .about-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-gradient);
+            z-index: 1;
         }
 
         .footer-content {
@@ -480,6 +496,10 @@
 
         .footer-title {
             font-size: 2rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 1rem;
         }
 
@@ -632,17 +652,17 @@
 </head>
 <body>
     <!-- Navigation Header -->
-    <header class="about-header" style="height: 100px;">
-        <div class="container">
+    <header class="about-header">
+        <div class="nav-container">
             <a href="../index.html" class="logo">
-                <img src="Algotrick & Realty l.png" alt="Algotrick & Realty Logo" class="logo-image">
+                <img src="../assets/images/Algotrick & Realty l.png" alt="logo" class="logo-image">
             </a>
 
             <nav class="about-nav">
                 <a href="../index.html">Home</a>
                 <a href="../buy/index.html">Buy</a>
-                <a href="../sell/index.html">Sell</a>
-                <a href="../contact/index.html">Contact</a>
+                <!-- <a href="../sell/index.html">Sell</a> -->
+                <a href="../contact/index.html">Contact Us</a>
                 <a href="../Gallery/index.html">Gallery</a>
                 <a href="#" class="active">About</a>
             </nav>

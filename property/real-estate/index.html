@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- 
     - primary meta tags
   -->
@@ -87,12 +86,6 @@
           </a>
         </li>
         <li class="hamburger-item">
-          <a href="sell/index.html" class="hamburger-link">
-            <span class="hamburger-icon">🏷️</span>
-            <span class="hamburger-label">Sell</span>
-          </a>
-        </li>
-        <li class="hamburger-item">
           <a href="contact/index.html" class="hamburger-link">
             <span class="hamburger-icon">📞</span>
             <span class="hamburger-label">Contact Us</span>
@@ -126,23 +119,26 @@
         <div class="container">
 
           <div class="hero-content">
-
+<!-- 
             <h1 class="headline-large hero-title" data-aos="fade-up" data-aos-delay="200">
               Find Your Dream Home Today
-            </h1>
+            </h1> -->
 
+            <h1 class="hero-title">
+              Find Your <span id="changing-text"></span>
+            </h1>
+            
             <p class="body-large hero-text" data-aos="fade-up" data-aos-delay="300">
               Discover your perfect property with our expert guidance and premium listings. Your dream home is just a click away.
             </p>
 
-            <form action="./" method="get" class="search-bar" data-aos="fade-up" data-aos-delay="400">
+            <!-- <form action="./" method="get" class="search-bar" data-aos="fade-up" data-aos-delay="400">
 
               <label class="search-item">
                 <span class="label-medium label">Want to</span>
 
                 <select name="want-to" class="search-item-field body-medium">
                   <option value="buy" selected>Buy</option>
-                  <option value="sell">Sell</option>
                   <option value="rent">Rent</option>
                 </select>
 
@@ -178,12 +174,60 @@
                 <span class="label-medium">Search Properties</span>
               </button>
 
-            </form>
+            </form> -->
+
+            <form action="./" method="get" class="search-bar">
+
+  <div class="search-container">
+
+    <!-- Want to -->
+    <div class="search-box">
+      <label>Want to</label>
+      <div class="field">
+        <span class="material-symbols-rounded">real_estate_agent</span>
+        <select name="want-to">
+          <option value="buy">Buy</option>
+          <option value="rent">Rent</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Property Type -->
+    <div class="search-box">
+      <label>Property type</label>
+      <div class="field">
+        <span class="material-symbols-rounded">home</span>
+        <select name="property-type">
+          <option value="any">Any</option>
+          <option value="houses">Houses</option>
+          <option value="apartments">Apartments</option>
+          <option value="villa">Villa</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="search-box">
+      <label>Location</label>
+      <div class="field">
+        <span class="material-symbols-rounded">location_on</span>
+        <input type="text" name="location" placeholder="Street, City, Zip..." />
+      </div>
+    </div>
+
+    <!-- Button -->
+    <button type="submit" class="search-btn">
+      <span class="material-symbols-rounded">search</span>
+      Search
+    </button>
+
+  </div>
+
+</form>
 
           </div>
 
           <div class="hero-banner-container">
-            <img src="assets/images/Luxury modern 2 .png" width="816" height="659" alt="Luxury Home" class="hero-banner" data-aos="fade-left" data-aos-delay="500">
             <div class="hero-overlay">
               <div class="hero-stats">
                 <div class="stat-item" data-aos="fade-up" data-aos-delay="600">
@@ -901,7 +945,7 @@
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
               </a>
               <a href="#" class="btn btn-outline">
-                <span class="label-medium">Contact Us</span>
+                <span class="label-medium" style="color: whitesmoke;">Contact Us</span>
                 <span class="material-symbols-rounded" aria-hidden="true">phone</span>
               </a>
             </div>
@@ -954,10 +998,6 @@
 
             <li>
               <a href="#" class="body-medium footer-link">Buy</a>
-            </li>
-
-            <li>
-              <a href="#" class="body-medium footer-link">Sell</a>
             </li>
 
             <li>
@@ -1106,6 +1146,43 @@
       mirror: false,
     });
   </script>
+
+<!-- Js auto rotate effects -->
+<script>
+const words = ["Dream Home Today", "Perfect Villa", "Luxury Apartment", "Ideal Property"];
+
+let i = 0;
+let j = 0;
+let currentWord = "";
+let isDeleting = false;
+
+function typeEffect() {
+  currentWord = words[i];
+
+  if (!isDeleting) {
+    document.getElementById("changing-text").innerText = currentWord.substring(0, j + 1);
+    j++;
+    if (j === currentWord.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1500);
+      return;
+    }
+  } else {
+    document.getElementById("changing-text").innerText = currentWord.substring(0, j - 1);
+    j--;
+    if (j === 0) {
+      isDeleting = false;
+      i = (i + 1) % words.length;
+    }
+  }
+
+  setTimeout(typeEffect, isDeleting ? 50 : 100);
+}
+
+typeEffect();
+</script>
+
+
 
 </body>
 </html>

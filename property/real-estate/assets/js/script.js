@@ -1515,3 +1515,4 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Theme changed to:', e.detail.theme);
   });
 });
+
