@@ -43,9 +43,9 @@ let scrollTimeout;
  */
 class ThemeManager {
   constructor() {
-    this.currentTheme = localStorage.getItem('theme') || 'dark-theme';
-    this.init();
-  }
+  this.currentTheme = 'light-theme'; // force light always
+  this.init();
+}
 
   init() {
     this.setTheme(this.currentTheme, false);
@@ -1516,3 +1516,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+// preloader design
